@@ -31,6 +31,150 @@
     margin: auto;
 }
 
+/* section 1 start */
+.section-1-container {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1440px;
+    height: 100vh;
+    background: #fff7f7;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem 2rem;
+    width: 100%;
+}
+
+.grid-template-container {
+    width: 70%;
+    background: rgba(255, 255, 255, .1);
+    box-shadow: 0 1rem 2rem rgba(0,0,0,.2);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    font-size: 1.7rem;
+    color: #fff;
+    text-transform: none;
+}
+
+.description {
+    text-align: center;
+    width: 30%;
+    background: rgba(255, 255, 255, .1);
+    box-shadow: 0 1rem 2rem rgba(0,0,0,.2);
+    border-radius: 0.5rem;
+    padding: 2rem;
+    font-size: 1.7rem;
+    color: #fff;
+    text-transform: none;
+}
+
+.description h1 {
+    font-size: 1.7rem;
+    color: #CD5334;
+}
+
+.description p {
+    margin-top: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #121212;
+}
+
+.item {
+    position: relative;
+    overflow: hidden;
+}
+
+.item img {
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.5s ease;
+}
+
+.item:hover img {
+    opacity: 0.2;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.item:hover .overlay {
+    opacity: 1;
+}
+
+
+
+.text {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+  text-align: center;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 200px 150px 200px 200px 1fr;
+    grid-template-rows: 100px 100px 100px 100px 1fr;
+    grid-column-gap: 1.5rem;
+    grid-row-gap: 1.5rem;
+}
+
+.item1 { 
+    grid-area: 1 / 1 / 4 / 3; 
+    background-image: url("./toogood/images/otherImages/section1/image-1.webp");
+    background-position: center;
+    background-size: cover; 
+    border-radius: 1rem;
+}
+.item2 { 
+    grid-area: 1 / 3 / 4 / 4; 
+    background-image: url("./toogood/images/otherImages/section1/image-2.webp");
+    background-position: center;
+    background-size: cover; 
+    border-radius: 1rem;
+}
+.item3 { 
+    grid-area: 4 / 1 / 6 / 4;
+    /* border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem; */
+    border-radius: 1rem;
+    background-image: url("./toogood/images/otherImages/section1/image-3.webp");
+    background-position: center;
+    background-size: cover;
+}
+.item4 { 
+    grid-area: 1 / 4 / 3 / 5; 
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    background-image: url("./toogood/images/otherImages/section1/image-4.webp");
+    background-position: center;
+    background-size: cover;
+}
+.item5 { 
+    grid-area: 3 / 4 / 6 / 5; 
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    background-image: url("./toogood/images/otherImages/section1/image-5.webp");
+    background-position: center;
+    background-size: cover;
+}
+/* section 1 end */
 
 
 
@@ -214,4 +358,5 @@
 
 
 /* feedback page styling end BY SHOUVICK */
+
 
