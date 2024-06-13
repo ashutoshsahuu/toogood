@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>toogood</title>
+
     <link rel="stylesheet" href="style.css" />
     <script
       src="https://kit.fontawesome.com/0b32bf8b56.js"
@@ -11,241 +12,7 @@
     ></script>
     <style>
 
-      /* Pizza Section styling Here */
-
-      .pizza{
-        background-color: #2d1b19; 
-        height: fit-content; 
-        display: flex; 
-        flex-direction: column; 
-        gap: 0px; 
-        position: relative;
-      }
-
-      /* This styling for animation which is knife related, vertical line related, and rotation of pizza  */
-      .verticalLine{
-       position: absolute; 
-       width: 2px; 
-       background-color: white; 
-       left: 40px; 
-       top: 0px;
-       animation: verline 3s forwards;
-       animation-timeline: view();
-       animation-range-start: cover;
-       animation-range-end: cover;
-      }
-
-       @keyframes verline {
-        100%{
-         height:300px;
-        }
-        0%{
-          height: 0px;
-        }
-      }
-      .Knife{
-        position: absolute; 
-        left: 40px; 
-        top: 0px; 
-        height: 100px; 
-        width: 100px; 
-        color: white;
-      }
-      .Knife img{
-        height: 100%;
-        width: 100%;
-        animation: knifeCut 3s forwards;
-        animation-timeline: view();
-        animation-range-start: cover;
-        animation-range-end: cover;
-      }
-      @keyframes knifeCut{
-        100%{
-          transform: translateY(290px);
-        }
-        0%{
-          transform: translateY(0px);
-        }
-      }
-
-      .italic{
-      position: absolute; 
-      right: 0; 
-      bottom: 10px;
-      animation: round 3s forwards infinite;
-      transition: 3s;
-      }
-      @keyframes round {
-        100%{  
-            transform: rotate(360deg) ;
-        }
-       
-      }
-
-      /* This Animation Styling ends here */
-
-      /* This styling for first Grid */
-      .pizzaGrid1{
-        width: 900px; 
-        height: fit-content; 
-        display: grid; 
-        grid-template-columns: .8fr 1.2fr; 
-        grid-template-rows: 450px; 
-        gap: 20px; 
-        padding: 2rem 2rem 0px; 
-        background-color:rgb(50, 31, 31);
-      }
-      .pizzachild-1{
-        background-color: #2d1b19; 
-        box-shadow: 2px 4px 6px black; 
-        border-radius: 10px; 
-        display: flex; 
-        flex-direction: column;   
-        padding: 1.3rem; gap: 20px;
-      }
-      .pizzaSliceImg1{
-        height: 60%;
-        width: 70%; 
-        margin: auto;
-      }
-      .aboutPizza1{
-        color: white; 
-        font-size: 1.5em ; 
-        font-family: 'Urbanist', sans-serif;
-      }
-      .aboutPizzaDesc1{
-        color: white; 
-        font-size: .8em ; 
-        font-weight: 700; 
-        font-family: 'Josefin Slab', serif;
-      }
-      .pizzaBtn1{
-        background-color: rgba(128, 128, 128, 0.384); 
-        border-radius: 30px; 
-        padding: 1rem 1.5rem; 
-        border: none; 
-        color: white; 
-        cursor: pointer; 
-        width: 45%; 
-        font-family: 'Jost', sans-serif;
-      }
-      .pizzachild-2{
-        background-color: #2d1b19; 
-        box-shadow: 2px 4px 6px black; 
-        border-radius: 10px; 
-        overflow: hidden;
-      }
-      .pizzaSliceImg2{
-        transform: rotate(180deg); 
-        height: 50%; 
-        margin-left: 105px;
-      }
-      .aboutPizza2{
-        color: white; font-size: 1.7em ; margin: 30px;font-family: 'Urbanist', sans-serif;
-      }
-      .aboutPizzaDesc2{
-        color: white; 
-        font-size: .9em; 
-        margin: 10px 30px 10px; 
-        font-weight: 700; 
-        font-family: 'Josefin Slab', serif;
-      }
-      .pizzaBtn2{
-        background-color: rgba(128, 128, 128, 0.384); 
-        border-radius: 30px; 
-        padding: 1rem 1.5rem; 
-        border: none; color: white; 
-        cursor: pointer; 
-        width: 25%; 
-        margin: 10px 30px 30px; 
-        font-family: 'Jost', sans-serif;
-      }
-      /* First Grid Styling ends here */
-
-      /* This styling for second Grid */
-      .pizzaGrid2{
-        width: 900px; 
-        height: fit-content;  
-        display: grid; 
-        grid-template-columns: 1.2fr .8fr; 
-        grid-template-rows: 250px ; 
-        gap: 20px;
-        padding: 20px 2rem 2rem; 
-        background-color:rgb(50, 31, 31);
-      }
-      .pizzachild-3{
-        background-color: #2d1b19; 
-        box-shadow: 2px 4px 6px black;
-        border-radius: 10px; 
-        overflow: hidden; 
-        padding: .5rem; 
-        display: flex; 
-        gap: 45px;
-      }
-
-      .pizzachild-3 div{
-        display: flex; 
-        flex-direction: column; 
-        justify-content: center; 
-        gap: 20px; 
-        color: white;
-      }
-      .pizzaSliceImg3{
-        width: 60%; 
-        height: 100%;
-        margin-left: -80px;
-      }
-      .aboutPizza3{
-        font-size: 1.7em ; 
-        font-family: 'Urbanist', sans-serif;
-      }
-      .aboutPizzaDesc3{
-        font-size: .8em ; 
-        font-family: 'Josefin Slab', serif; 
-        font-weight: 700;
-      }
-      .pizzaBtn3{
-        background-color: rgba(128, 128, 128, 0.384); 
-        border-radius: 30px; 
-        padding: 1rem 1.5rem; 
-        border: none; 
-        color: white; 
-        cursor: pointer; 
-        width: 55%;  
-        font-family: 'Jost', sans-serif;
-      }
-      .pizzachild-4{
-        background-color: #2d1b19; 
-        box-shadow: 2px 4px 6px black; 
-        border-radius: 10px; 
-        display: flex; 
-        flex-direction: column; 
-        justify-content: center; 
-        align-items: center;  
-        gap: 40px; 
-        padding: 1rem; 
-        color: white;
-      }
-      .aboutPizza4{
-        font-size: 2.1rem; 
-        text-align: center; 
-        line-height: 1em; 
-        font-weight: 400; 
-        font-family: 'Urbanist', sans-serif;
-      }
-      .pizzaBtn4{
-        background-color: rgba(128, 128, 128, 0.384); 
-        border-radius: 30px; 
-        padding: 1rem 1.5rem; 
-        border: none; 
-        color: white; 
-        cursor: pointer; 
-        width: 45%;  
-        font-family: 'Jost', sans-serif;
-      }
-
-      /* Second Grid Styling ends here */
-
+     
     </style>
    
   </head>
@@ -261,6 +28,20 @@
                 Cupcake: "Delicious, fluffy cupcakes with creamy frosting."
               </div>
             </div>
+=======
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/0b32bf8b56.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+  <!-- section 1 starts here -->
+  <section class="section-1-container container section-1">
+    <div class="grid-template-container">
+      <div class="grid-container">
+        <div class="item item1">
+          <div class="overlay">
+            <div class="text">Cupcake: "Delicious, fluffy cupcakes with creamy frosting."</div>
           </div>
           <div class="item item2">
             <div class="overlay">
@@ -292,6 +73,7 @@
           </div>
         </div>
       </div>
+
       <div class="description">
         <h1>A Tradition of Excellence and Quality</h1>
         <p>
@@ -305,7 +87,22 @@
     <!-- section 1 ends here -->
 
     <!-- section 4 start here ashutosh -->
-
+    </div>
+    <div class="description">
+      <h1>A Tradition of Excellence and Quality</h1>
+      <p>
+        Our commitment to quality and excellence has remained unwavering.
+        Each dish is crafted with the finest ingredients, ensuring every
+        bite is a memorable experience. Join us at TOOGOOD, and become a
+        part of our ever-growing family.
+      </p>
+      <p>"Good idea start with brainstorming. Great ideas start with coffee."</p>
+    </div>
+  </section>
+  <!-- section 1 ends here -->
+  
+  <!-- section 4 start here ashutosh -->
+   
     <section class="container icon-image-section">
       <div>
         <h2>In Accociation With</h2>
