@@ -101,7 +101,7 @@ nav {
     color: #121212;
 }
 
-main {
+.hero-section {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -113,6 +113,8 @@ main {
     background-color: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     width: fit-content;
+    padding: 20px;
+    border-radius: 10px;
 }
 
 @keyframes updown {
@@ -122,22 +124,17 @@ main {
 
     to {
         transform: translateY(35%);
-        /* transform: translate(0px , 15vh); */
     }
 }
 
-
 .main-text {
     font-size: clamp(1.5rem, 5vw, 7rem);
-    font-family: "Urbanist", sans-serif;
-    /* font-family: "Jost", sans-serif; */
-    /* font-family: 'Playfair Display', serif;   */
+    font-family: "Jost", sans-serif;
     width: 700px;
     text-align: center;
     line-height: 80px;
     font-weight: 600;
     color: #fff;
-
 }
 
 .main-text span:nth-of-type(1) {
@@ -148,7 +145,6 @@ main {
     font-family: "Josefin Slab", serif;
     font-style: italic;
 }
-
 
 .main-image-1 {
     width: 150px;
@@ -205,8 +201,7 @@ main {
 /* carousal section start  */
 
 .carousal-section {
-    height: 700px;
-    /* background-color: aqua; */
+    height: 600px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -280,85 +275,166 @@ main {
 /* carousal section ends */
 
 
-
 /* section 1 start */
-.section-1-container {
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 1440px;
-    /* height: fit-content; */
-    padding: 2rem;
-    height: fit-content;
-    background: #fff7f7;
-    padding: 100px 2rem;
-    font-family: urbanist, sans-serif;
-}
 
 .section-1 {
+    /* background-color: red; */
+    height: 700px;
+    width: 100%;
+    padding: 80px 30px;
+    background-color: #fff7f7;
+}
+
+.section-1-container {
     display: flex;
+    width: 1440px;
+    height: 100%;
+    margin: auto;
+    justify-content: space-evenly;
+    /* font-family: "Urbanist", sans-serif; */
+    font-family: josefin slab, serif;
+}
+
+.section-1-description {
+    width: 25%;
+    /* background-color: blue; */
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-direction: row-reverse;
-    gap: 2rem;
-    padding: 2rem;
-    width: 100%;
+    gap: 1rem;
+    border-radius: 15px;
+    border: 1px solid rgba(0, 0, 0, .2);
+    box-shadow: 10px 10px 0px rgba(0, 0, 0, .2);
+    animation: fadeup 1s forwards;
+    animation-timeline: view();
+    animation-range-start: cover 5vh;
+    animation-range-end: cover 80vh;
+
 }
 
-.grid-template-container {
-    width: 70%;
-    background: rgba(255, 255, 255, .1);
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, .2);
-    border-radius: 0.5rem;
-    padding: 1.5rem;
-    font-size: 1.7rem;
-    color: #fff;
-    text-transform: none;
+@keyframes fadeup {
+    from {
+        transform: scale(0.5) translateY(100px);
+        opacity: 0;
+    }
+    
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+
 }
 
-.description {
-    text-align: center;
-    width: 30%;
-    background: rgba(255, 255, 255, .1);
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, .2);
-    border-radius: 0.5rem;
-    padding: 2rem;
-    font-size: 1.7rem;
-    color: #fff;
-    text-transform: none;
-}
-
-.description h1 {
+.section-1-description h1 {
     font-size: 1.7rem;
     color: #CD5334;
 }
 
-.description p {
-    margin-top: 1.5rem;
+.section-1-description p {
     font-size: 1.2rem;
     font-weight: 400;
     color: #121212;
 }
 
-.item {
-    position: relative;
+
+.section-1-grid {
+    width: 65%;
+    /* background-color: green; */
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* box-shadow: 0 1rem 2rem rgba(0, 0, 0, .2) */
+    border: 1px solid rgba(0, 0, 0, .2);
+    box-shadow: 10px 10px 0px rgba(0, 0, 0, .2);
+    animation: fadeup 1s forwards;
+    animation-timeline: view();
+    animation-range-start: cover 5vh;
+    animation-range-end: cover 80vh;
+}
+
+
+.grid-container {
+    /* background-color: rgb(25, 197, 206); */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 20px;
+    height: 100%;
+
+}
+
+.item1 {
+    grid-area: 1 / 1 / 4 / 3;
+    background-color: rgb(0, 255, 21);
+    background-image: url("../toogood/images/otherImages/section1/image-1.webp");
+    background-position: center;
+    background-size: cover;
+    border-radius: 1rem;
+}
+
+.item2 {
+    grid-area: 1 / 3 / 4 / 4;
+    background-color: yellow;
+    background-image: url("../toogood/images/otherImages/section1/image-2.webp");
+    background-position: center;
+    background-size: cover;
+    border-radius: 1rem;
+
+
+}
+
+.item3 {
+    grid-area: 4 / 1 / 6 / 4;
+    background-color: rgb(46, 40, 156);
+    border-radius: 1rem;
+    background-image: url("../toogood/images/otherImages/section1/image-3.webp");
+    background-position: center;
+    background-size: cover;
+
+}
+
+.item4 {
+    grid-area: 1 / 4 / 3 / 5;
+    background-color: rgb(174, 17, 153);
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    background-image: url("../toogood/images/otherImages/section1/image-4.webp");
+    background-position: center;
+    background-size: cover;
+
+}
+
+.item5 {
+    grid-area: 3 / 4 / 6 / 5;
+    background-color: rgb(208, 19, 19);
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    background-image: url("../toogood/images/otherImages/section1/image-5.webp");
+    background-position: center;
+    background-size: cover;
+}
+
+
+.grid-item {
     overflow: hidden;
 }
 
-.item img {
+.grid-item img {
     width: 100%;
     height: 100%;
     transition: opacity 0.5s ease;
 }
 
-.item:hover img {
+.grid-item:hover img {
     opacity: 0.2;
 }
 
 .overlay {
-    position: absolute;
-    bottom: 0;
     background: rgba(0, 0, 0, 0.5);
     width: 100%;
     height: 100%;
@@ -369,7 +445,7 @@ main {
     transition: opacity 0.5s ease;
 }
 
-.item:hover .overlay {
+.grid-item:hover .overlay {
     opacity: 1;
 }
 
@@ -381,169 +457,95 @@ main {
     text-align: center;
 }
 
-.grid-container {
-    display: grid;
-    grid-template-columns: 21% 20% 25% 25% 15%;
-    grid-template-rows: 95px 95px 95px 95px 1fr;
-    grid-column-gap: 1.5rem;
-    grid-row-gap: 1.5rem;
-}
+@media screen and (max-width: 912px) {
 
-.item1 {
-    grid-area: 1 / 1 / 4 / 3;
-    background-image: url("./images/otherImages/section1/image-1.webp");
-    background-position: center;
-    background-size: cover;
-    border-radius: 1rem;
-}
+    .section-1-container {
+        flex-direction: column;
+        justify-content: center;
+        gap: 3rem;
+        width: 100%;
+    }
 
-.item2 {
-    grid-area: 1 / 3 / 4 / 4;
-    background-image: url("./images/otherImages/section1/image-2.webp");
-    background-position: center;
-    background-size: cover;
-    border-radius: 1rem;
-}
+    .section-1-description {
+        width: 100%;
+        height: 250px;
+    }
 
-.item3 {
-    grid-area: 4 / 1 / 6 / 4;
-    border-radius: 1rem;
-    background-image: url("./images/otherImages/section1/image-3.webp");
-    background-position: center;
-    background-size: cover;
-}
-
-.item4 {
-    grid-area: 1 / 4 / 3 / 5;
-    border-top-left-radius: 1rem;
-    border-top-right-radius: 1rem;
-    background-image: url("./images/otherImages/section1/image-4.webp");
-    background-position: center;
-    background-size: cover;
-}
-
-.item5 {
-    grid-area: 3 / 4 / 6 / 5;
-    border-bottom-left-radius: 1rem;
-    border-bottom-right-radius: 1rem;
-    background-image: url("./images/otherImages/section1/image-5.webp");
-    background-position: center;
-    background-size: cover;
-}
-
-
- @media (max-width: 1060px) {
     .grid-container {
-        grid-template-columns: 21% 21% 21% 24% 15%;
-    grid-template-rows: 70px 70px 70px 70px 70px;
+        gap: 10px;
     }
 
-    .grid-template-container {
-        width: 70%;
-    }
-    
-    .description {
-        width: 30%;
-    }
-    .description h1 {
-        font-size: 1.2rem;
-    }
-    
-    .description p {
-        margin-top: 0.9rem;
-        font-size: 0.9rem;
-    }
-    
-}
- @media (max-width: 916px) {
-    .grid-container {
-        grid-template-columns: 21% 21% 21% 24% 15%;
-        grid-template-rows: 60px 60px 60px 60px 60px;
+    .section-1-grid {
+        height: 450px;
+        width: 100%;
     }
 
-    .grid-template-container {
-        width: 70%;
-    }
-    
-    .description {
-        width: 30%;
-    }
-    
-    .description h1 {
-        font-size: 1.3rem;
-    }
-    
-    .description p {
-        margin-top: 1rem;
-        font-size: 1rem;
-    }
     .text {
-        font-size: 0.7rem;
-    }
-}
- @media (max-width: 765px) {
-    .grid-container {
-        grid-template-columns: 20% 20% 20% 24% 15%;
-        grid-template-rows: 50px 50px 50px 50px 50px;
-    }
-
-    .grid-template-container {
-        width: 65%;
-    }
-    
-    .description {
-        width: 35%;
-    }
-    
-    .description h1 {
-        font-size: 1rem;
-    }
-    
-    .description p {
-        margin-top: 1rem;
         font-size: 0.8rem;
+        padding: 1rem;
     }
-}
- @media (max-width: 640px) {
 
-    /* .section-1-container {
-        display: block;
-    } */
+}
+
+
+@media (max-width: 768px) {
+    .section-1-container {
+        flex-direction: column;
+        justify-content: center;
+        gap: 3rem;
+        width: 100%;
+    }
+
+    .section-1-description {
+        width: 100%;
+    }
+
     .grid-container {
-        grid-template-columns: 20% 19% 22% 22% 15%;
-        grid-template-rows: 40px 40px 40px 40px 40px;
+        gap: 10px;
     }
 
-    .grid-template-container {
+    .section-1-grid {
         width: 100%;
+        height: 350px;
     }
-    
-    .description {
-        margin-top: 1rem;
-        width: 100%;
+
+    .text {
+        font-size: 0.6rem;
+        padding: 0.8rem;
     }
-    
+
 }
- @media (max-width: 455px) {
 
+@media (max-width: 480px) {
     .section-1 {
-        order: 1;
-        /* flex-direction: row-reverse; */
+        height: 100%;
     }
+
+    .section-1-container {
+        flex-direction: column;
+        justify-content: center;
+        gap: 3rem;
+        width: 100%;
+    }
+
     .grid-container {
-        grid-template-columns: 17% 17% 20% 22% 15%;
-        grid-template-rows: 40px 40px 40px 40px 40px;
+        gap: 5px;
     }
+
+    .section-1-description {
+        width: 100%;
+    }
+
+    .section-1-grid {
+        width: 100%;
+    }
+
     .text {
         font-size: 0.5rem;
+        padding: 0.6rem;
     }
 }
- @media (max-width: 375px) {
-    .grid-container {
-        grid-template-columns: 16% 16% 19% 21% 15%;
-        grid-template-rows: 40px 40px 40px 40px 40px;
-    }
-}
+
 /* section 1 end */
 
 
@@ -711,7 +713,8 @@ main {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     padding: 2rem;
-    background-image: url('https://i.pinimg.com/originals/2f/3c/dc/2f3cdc6a9b182457f81b4f72efd26ab3.jpg');
+    /* background-image: url('https://i.pinimg.com/originals/2f/3c/dc/2f3cdc6a9b182457f81b4f72efd26ab3.jpg'); */
+    background-color: #212121;
     background-repeat: no-repeat;
     background-size: cover;
     font-family: "Urbanist", sans-serif;
@@ -837,7 +840,7 @@ main {
 
 
 
-.feedback_section{
+.feedback_section {
     width: 100vw;
     height: 500px;
     border: 1px solid;
@@ -861,8 +864,6 @@ main {
     bottom: 370px;
     right: -10px;
     z-index: 1;
-
-
 }
 
 .feedback_section>h3 {
@@ -996,238 +997,267 @@ main {
 
 /* feedback page styling end BY SHOUVICK */
 
- /* Pizza Section styling Here */
+/* Pizza Section styling Here */
 
-      .pizza{
-        background-color: #2d1b19; 
-        height: fit-content; 
-        display: flex; 
-        flex-direction: column; 
-        gap: 0px; 
-        position: relative;
-      }
+.pizza {
+    background-color: #2d1b19;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    position: relative;
+}
 
-      /* This styling for animation which is knife related, vertical line related, and rotation of pizza  */
-      .verticalLine{
-       position: absolute; 
-       width: 2px; 
-       background-color: white; 
-       left: 40px; 
-       top: 0px;
-       animation: verline 3s forwards;
-       animation-timeline: view();
-       animation-range-start: cover;
-       animation-range-end: cover;
-      }
+/* This styling for animation which is knife related, vertical line related, and rotation of pizza  */
+.verticalLine {
+    position: absolute;
+    width: 2px;
+    background-color: white;
+    left: 40px;
+    top: 0px;
+    animation: verline 3s forwards;
+    animation-timeline: view();
+    animation-range-start: cover;
+    animation-range-end: cover;
+}
 
-       @keyframes verline {
-        100%{
-         height:300px;
-        }
-        0%{
-          height: 0px;
-        }
-      }
-      .Knife{
-        position: absolute; 
-        left: 40px; 
-        top: 0px; 
-        height: 100px; 
-        width: 100px; 
-        color: white;
-      }
-      .Knife img{
-        height: 100%;
-        width: 100%;
-        animation: knifeCut 3s forwards;
-        animation-timeline: view();
-        animation-range-start: cover;
-        animation-range-end: cover;
-      }
-      @keyframes knifeCut{
-        100%{
-          transform: translateY(290px);
-        }
-        0%{
-          transform: translateY(0px);
-        }
-      }
+@keyframes verline {
+    100% {
+        height: 300px;
+    }
 
-      .italic{
-      position: absolute; 
-      right: 0; 
-      bottom: 10px;
-      animation: round 3s forwards infinite;
-      transition: 3s;
-      }
-      @keyframes round {
-        100%{  
-            transform: rotate(360deg) ;
-        }
-       
-      }
+    0% {
+        height: 0px;
+    }
+}
 
-      /* This Animation Styling ends here */
+.Knife {
+    position: absolute;
+    left: 40px;
+    top: 0px;
+    height: 100px;
+    width: 100px;
+    color: white;
+}
 
-      /* This styling for first Grid */
-      .pizzaGrid1{
-        width: 900px; 
-        height: fit-content; 
-        display: grid; 
-        grid-template-columns: .8fr 1.2fr; 
-        grid-template-rows: 450px; 
-        gap: 20px; 
-        padding: 2rem 2rem 0px; 
-        background-color:rgb(50, 31, 31);
-      }
-      .pizzachild-1{
-        background-color: #2d1b19; 
-        box-shadow: 2px 4px 6px black; 
-        border-radius: 10px; 
-        display: flex; 
-        flex-direction: column;   
-        padding: 1.3rem; gap: 20px;
-      }
-      .pizzaSliceImg1{
-        height: 60%;
-        width: 70%; 
-        margin: auto;
-      }
-      .aboutPizza1{
-        color: white; 
-        font-size: 1.5em ; 
-        font-family: 'Urbanist', sans-serif;
-      }
-      .aboutPizzaDesc1{
-        color: white; 
-        font-size: .8em ; 
-        font-weight: 700; 
-        font-family: 'Josefin Slab', serif;
-      }
-      .pizzaBtn1{
-        background-color: rgba(128, 128, 128, 0.384); 
-        border-radius: 30px; 
-        padding: 1rem 1.5rem; 
-        border: none; 
-        color: white; 
-        cursor: pointer; 
-        width: 45%; 
-        font-family: 'Jost', sans-serif;
-      }
-      .pizzachild-2{
-        background-color: #2d1b19; 
-        box-shadow: 2px 4px 6px black; 
-        border-radius: 10px; 
-        overflow: hidden;
-      }
-      .pizzaSliceImg2{
-        transform: rotate(180deg); 
-        height: 50%; 
-        margin-left: 105px;
-      }
-      .aboutPizza2{
-        color: white; font-size: 1.7em ; margin: 30px;font-family: 'Urbanist', sans-serif;
-      }
-      .aboutPizzaDesc2{
-        color: white; 
-        font-size: .9em; 
-        margin: 10px 30px 10px; 
-        font-weight: 700; 
-        font-family: 'Josefin Slab', serif;
-      }
-      .pizzaBtn2{
-        background-color: rgba(128, 128, 128, 0.384); 
-        border-radius: 30px; 
-        padding: 1rem 1.5rem; 
-        border: none; color: white; 
-        cursor: pointer; 
-        width: 25%; 
-        margin: 10px 30px 30px; 
-        font-family: 'Jost', sans-serif;
-      }
-      /* First Grid Styling ends here */
+.Knife img {
+    height: 100%;
+    width: 100%;
+    animation: knifeCut 3s forwards;
+    animation-timeline: view();
+    animation-range-start: cover;
+    animation-range-end: cover;
+}
 
-      /* This styling for second Grid */
-      .pizzaGrid2{
-        width: 900px; 
-        height: fit-content;  
-        display: grid; 
-        grid-template-columns: 1.2fr .8fr; 
-        grid-template-rows: 250px ; 
-        gap: 20px;
-        padding: 20px 2rem 2rem; 
-        background-color:rgb(50, 31, 31);
-      }
-      .pizzachild-3{
-        background-color: #2d1b19; 
-        box-shadow: 2px 4px 6px black;
-        border-radius: 10px; 
-        overflow: hidden; 
-        padding: .5rem; 
-        display: flex; 
-        gap: 45px;
-      }
+@keyframes knifeCut {
+    100% {
+        transform: translateY(290px);
+    }
 
-      .pizzachild-3 div{
-        display: flex; 
-        flex-direction: column; 
-        justify-content: center; 
-        gap: 20px; 
-        color: white;
-      }
-      .pizzaSliceImg3{
-        width: 60%; 
-        height: 100%;
-        margin-left: -80px;
-      }
-      .aboutPizza3{
-        font-size: 1.7em ; 
-        font-family: 'Urbanist', sans-serif;
-      }
-      .aboutPizzaDesc3{
-        font-size: .8em ; 
-        font-family: 'Josefin Slab', serif; 
-        font-weight: 700;
-      }
-      .pizzaBtn3{
-        background-color: rgba(128, 128, 128, 0.384); 
-        border-radius: 30px; 
-        padding: 1rem 1.5rem; 
-        border: none; 
-        color: white; 
-        cursor: pointer; 
-        width: 55%;  
-        font-family: 'Jost', sans-serif;
-      }
-      .pizzachild-4{
-        background-color: #2d1b19; 
-        box-shadow: 2px 4px 6px black; 
-        border-radius: 10px; 
-        display: flex; 
-        flex-direction: column; 
-        justify-content: center; 
-        align-items: center;  
-        gap: 40px; 
-        padding: 1rem; 
-        color: white;
-      }
-      .aboutPizza4{
-        font-size: 2.1rem; 
-        text-align: center; 
-        line-height: 1em; 
-        font-weight: 400; 
-        font-family: 'Urbanist', sans-serif;
-      }
-      .pizzaBtn4{
-        background-color: rgba(128, 128, 128, 0.384); 
-        border-radius: 30px; 
-        padding: 1rem 1.5rem; 
-        border: none; 
-        color: white; 
-        cursor: pointer; 
-        width: 45%;  
-        font-family: 'Jost', sans-serif;
-      }
+    0% {
+        transform: translateY(0px);
+    }
+}
 
-      /* Second Grid Styling ends here */
+.italic {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    animation: round 3s forwards infinite;
+    transition: 3s;
+}
 
+@keyframes round {
+    100% {
+        transform: rotate(360deg);
+    }
+
+}
+
+/* This Animation Styling ends here */
+
+/* This styling for first Grid */
+.pizzaGrid1 {
+    width: 900px;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: .8fr 1.2fr;
+    grid-template-rows: 450px;
+    gap: 20px;
+    padding: 2rem 2rem 0px;
+    background-color: rgb(50, 31, 31);
+}
+
+.pizzachild-1 {
+    background-color: #2d1b19;
+    box-shadow: 2px 4px 6px black;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 1.3rem;
+    gap: 20px;
+}
+
+.pizzaSliceImg1 {
+    height: 60%;
+    width: 70%;
+    margin: auto;
+}
+
+.aboutPizza1 {
+    color: white;
+    font-size: 1.5em;
+    font-family: 'Urbanist', sans-serif;
+}
+
+.aboutPizzaDesc1 {
+    color: white;
+    font-size: .8em;
+    font-weight: 700;
+    font-family: 'Josefin Slab', serif;
+}
+
+.pizzaBtn1 {
+    background-color: rgba(128, 128, 128, 0.384);
+    border-radius: 30px;
+    padding: 1rem 1.5rem;
+    border: none;
+    color: white;
+    cursor: pointer;
+    width: 45%;
+    font-family: 'Jost', sans-serif;
+}
+
+.pizzachild-2 {
+    background-color: #2d1b19;
+    box-shadow: 2px 4px 6px black;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.pizzaSliceImg2 {
+    transform: rotate(180deg);
+    height: 50%;
+    margin-left: 105px;
+}
+
+.aboutPizza2 {
+    color: white;
+    font-size: 1.7em;
+    margin: 30px;
+    font-family: 'Urbanist', sans-serif;
+}
+
+.aboutPizzaDesc2 {
+    color: white;
+    font-size: .9em;
+    margin: 10px 30px 10px;
+    font-weight: 700;
+    font-family: 'Josefin Slab', serif;
+}
+
+.pizzaBtn2 {
+    background-color: rgba(128, 128, 128, 0.384);
+    border-radius: 30px;
+    padding: 1rem 1.5rem;
+    border: none;
+    color: white;
+    cursor: pointer;
+    width: 25%;
+    margin: 10px 30px 30px;
+    font-family: 'Jost', sans-serif;
+}
+
+/* First Grid Styling ends here */
+
+/* This styling for second Grid */
+.pizzaGrid2 {
+    width: 900px;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: 1.2fr .8fr;
+    grid-template-rows: 250px;
+    gap: 20px;
+    padding: 20px 2rem 2rem;
+    background-color: rgb(50, 31, 31);
+}
+
+.pizzachild-3 {
+    background-color: #2d1b19;
+    box-shadow: 2px 4px 6px black;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: .5rem;
+    display: flex;
+    gap: 45px;
+}
+
+.pizzachild-3 div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    color: white;
+}
+
+.pizzaSliceImg3 {
+    width: 60%;
+    height: 100%;
+    margin-left: -80px;
+}
+
+.aboutPizza3 {
+    font-size: 1.7em;
+    font-family: 'Urbanist', sans-serif;
+}
+
+.aboutPizzaDesc3 {
+    font-size: .8em;
+    font-family: 'Josefin Slab', serif;
+    font-weight: 700;
+}
+
+.pizzaBtn3 {
+    background-color: rgba(128, 128, 128, 0.384);
+    border-radius: 30px;
+    padding: 1rem 1.5rem;
+    border: none;
+    color: white;
+    cursor: pointer;
+    width: 55%;
+    font-family: 'Jost', sans-serif;
+}
+
+.pizzachild-4 {
+    background-color: #2d1b19;
+    box-shadow: 2px 4px 6px black;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding: 1rem;
+    color: white;
+}
+
+.aboutPizza4 {
+    font-size: 2.1rem;
+    text-align: center;
+    line-height: 1em;
+    font-weight: 400;
+    font-family: 'Urbanist', sans-serif;
+}
+
+.pizzaBtn4 {
+    background-color: rgba(128, 128, 128, 0.384);
+    border-radius: 30px;
+    padding: 1rem 1.5rem;
+    border: none;
+    color: white;
+    cursor: pointer;
+    width: 45%;
+    font-family: 'Jost', sans-serif;
+}
+
+/* Second Grid Styling ends here */
