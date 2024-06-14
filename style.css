@@ -26,7 +26,9 @@
 .container {
     max-width: 1440px;
     margin: auto;
+    
 }
+
 
 
 /* first page starts */
@@ -713,7 +715,7 @@ nav {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     padding: 2rem;
-    /* background-image: url('https://i.pinimg.com/originals/2f/3c/dc/2f3cdc6a9b182457f81b4f72efd26ab3.jpg'); */
+    background-image: url('https://i.pinimg.com/originals/2f/3c/dc/2f3cdc6a9b182457f81b4f72efd26ab3.jpg');
     background-color: #212121;
     background-repeat: no-repeat;
     background-size: cover;
@@ -850,23 +852,7 @@ nav {
     position: relative;
     
 }
-/* .feedback_section>img:nth-of-type(1){
-    position: absolute;
-    width: 100px;
-    height: 150px;
-    opacity: 0.8;
-    
-} */
-/* .feedback_section>img:nth-of-type(2){
-    position: absolute;
-    height: 200px;
-    width: 170px;
-    bottom: 370px;
-    right: -10px;
-    z-index: 1;
 
-
-}  */
 .feedback_section>h3{
     text-align: center;
     font-family: "Great Vibes", cursive;
@@ -1399,3 +1385,45 @@ div.footer_last_div>div{
 }
 
 /* Second Grid Styling ends here */
+
+/* media query start */
+
+/* Second Grid Styling ends here */
+@media (width <=968px) {
+    .verticalLine {
+        display: none;
+    }
+
+    .Knife {
+        display: none;
+    }
+
+    .italic {
+        display: none;
+    }
+
+    .pizzaGrid1 {
+        width: 700px;
+    }
+
+    .pizzaGrid2 {
+        width: 700px;
+    }
+
+    .pizzachild-3 {
+        gap: 20px;
+    }
+}
+
+@media (width <=768px) {
+    .pizzaGrid1 {
+        width: 500px;
+        grid-template-rows: 280px;
+    }
+
+    .pizzaGrid2 {
+        width: 500px;
+    }
+}
+
+/* Media query ends here */
