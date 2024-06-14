@@ -1,443 +1,733 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>toogood</title>
     <link rel="stylesheet" href="style.css" />
-    <script
-      src="https://kit.fontawesome.com/0b32bf8b56.js"
-      crossorigin="anonymous"
-    ></script>
-    <style>
+    <script src="https://kit.fontawesome.com/0b32bf8b56.js" crossorigin="anonymous"></script>
 
-      /* Pizza Section styling Here */
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
 
-      .pizza{
-        background-color: #2d1b19; 
-        height: fit-content; 
-        display: flex; 
-        flex-direction: column; 
-        gap: 0px; 
-        position: relative;
-      }
-
-      /* This styling for animation which is knife related, vertical line related, and rotation of pizza  */
-      .verticalLine{
-       position: absolute; 
-       width: 2px; 
-       background-color: white; 
-       left: 40px; 
-       top: 0px;
-       animation: verline 3s forwards;
-       animation-timeline: view();
-       animation-range-start: cover;
-       animation-range-end: cover;
-      }
-
-       @keyframes verline {
-        100%{
-         height:300px;
-        }
-        0%{
-          height: 0px;
-        }
-      }
-      .Knife{
-        position: absolute; 
-        left: 40px; 
-        top: 0px; 
-        height: 100px; 
-        width: 100px; 
-        color: white;
-      }
-      .Knife img{
-        height: 100%;
-        width: 100%;
-        animation: knifeCut 3s forwards;
-        animation-timeline: view();
-        animation-range-start: cover;
-        animation-range-end: cover;
-      }
-      @keyframes knifeCut{
-        100%{
-          transform: translateY(290px);
-        }
-        0%{
-          transform: translateY(0px);
-        }
-      }
-
-      .italic{
-      position: absolute; 
-      right: 0; 
-      bottom: 10px;
-      animation: round 3s forwards infinite;
-      transition: 3s;
-      }
-      @keyframes round {
-        100%{  
-            transform: rotate(360deg) ;
-        }
-       
-      }
-
-      /* This Animation Styling ends here */
-
-      /* This styling for first Grid */
-      .pizzaGrid1{
-        width: 900px; 
-        height: fit-content; 
-        display: grid; 
-        grid-template-columns: .8fr 1.2fr; 
-        grid-template-rows: 450px; 
-        gap: 20px; 
-        padding: 2rem 2rem 0px; 
-        background-color:rgb(50, 31, 31);
-      }
-      .pizzachild-1{
-        background-color: #2d1b19; 
-        box-shadow: 2px 4px 6px black; 
-        border-radius: 10px; 
-        display: flex; 
-        flex-direction: column;   
-        padding: 1.3rem; gap: 20px;
-      }
-      .pizzaSliceImg1{
-        height: 60%;
-        width: 70%; 
-        margin: auto;
-      }
-      .aboutPizza1{
-        color: white; 
-        font-size: 1.5em ; 
-        font-family: 'Urbanist', sans-serif;
-      }
-      .aboutPizzaDesc1{
-        color: white; 
-        font-size: .8em ; 
-        font-weight: 700; 
-        font-family: 'Josefin Slab', serif;
-      }
-      .pizzaBtn1{
-        background-color: rgba(128, 128, 128, 0.384); 
-        border-radius: 30px; 
-        padding: 1rem 1.5rem; 
-        border: none; 
-        color: white; 
-        cursor: pointer; 
-        width: 120px; 
-        font-family: 'Jost', sans-serif;
-      }
-      .pizzachild-2{
-        background-color: #2d1b19; 
-        box-shadow: 2px 4px 6px black; 
-        border-radius: 10px; 
-        overflow: hidden;
-      }
-      .pizzaSliceImg2{
-        transform: rotate(180deg); 
-        height: 50%; 
-        margin-left: 105px;
-      }
-      .aboutPizza2{
-        color: white; font-size: 1.7em ; margin: 30px;font-family: 'Urbanist', sans-serif;
-      }
-      .aboutPizzaDesc2{
-        color: white; 
-        font-size: .9em; 
-        margin: 10px 30px 10px; 
-        font-weight: 700; 
-        font-family: 'Josefin Slab', serif;
-      }
-      .pizzaBtn2{
-        background-color: rgba(128, 128, 128, 0.384); 
-        border-radius: 30px; 
-        padding: 1rem 1.5rem; 
-        border: none; color: white; 
-        cursor: pointer; 
-        width: 120px; 
-        margin: 10px 30px 30px; 
-        font-family: 'Jost', sans-serif;
-      }
-      /* First Grid Styling ends here */
-
-      /* This styling for second Grid */
-      .pizzaGrid2{
-        width: 900px; 
-        height: fit-content;  
-        display: grid; 
-        grid-template-columns: 1.2fr .8fr; 
-        grid-template-rows: 250px ; 
-        gap: 20px;
-        padding: 20px 2rem 2rem; 
-        background-color:rgb(50, 31, 31);
-      }
-      .pizzachild-3{
-        background-color: #2d1b19; 
-        box-shadow: 2px 4px 6px black;
-        border-radius: 10px; 
-        overflow: hidden; 
-        padding: .5rem; 
-        display: flex; 
-        gap: 45px;
-      }
-
-      .pizzachild-3 div{
-        display: flex; 
-        flex-direction: column; 
-        justify-content: center; 
-        gap: 20px; 
-        color: white;
-      }
-      .pizzaSliceImg3{
-        width: 60%; 
-        height: 100%;
-        margin-left: -80px;
-      }
-      .aboutPizza3{
-        font-size: 1.7em ; 
-        font-family: 'Urbanist', sans-serif;
-      }
-      .aboutPizzaDesc3{
-        font-size: .8em ; 
-        font-family: 'Josefin Slab', serif; 
-        font-weight: 700;
-      }
-      .pizzaBtn3{
-        background-color: rgba(128, 128, 128, 0.384); 
-        border-radius: 30px; 
-        padding: 1rem 1.5rem; 
-        border: none; 
-        color: white; 
-        cursor: pointer; 
-        width: 120px; 
-        font-family: 'Jost', sans-serif;
-      }
-      .pizzachild-4{
-        background-color: #2d1b19; 
-        box-shadow: 2px 4px 6px black; 
-        border-radius: 10px; 
-        display: flex; 
-        flex-direction: column; 
-        justify-content: center; 
-        align-items: center;  
-        gap: 40px; 
-        padding: 1rem; 
-        color: white;
-      }
-      .aboutPizza4{
-        font-size: 2.1rem; 
-        text-align: center; 
-        line-height: 1em; 
-        font-weight: 400; 
-        font-family: 'Urbanist', sans-serif;
-      }
-      .pizzaBtn4{
-        background-color: rgba(128, 128, 128, 0.384); 
-        border-radius: 30px; 
-        padding: 1rem 1.5rem; 
-        border: none; 
-        color: white; 
-        cursor: pointer; 
-        width: 120px;  
-        font-family: 'Jost', sans-serif;
-      }
-
-      /* Second Grid Styling ends here */
-      @media (width <= 968px){
-        .verticalLine{
-          display: none;
-        }
-        .Knife{
-          display: none;
-        }
-        .italic{
-          display: none;
-        }
-        .pizzaGrid1{
-          width:700px;
-        }
-        .pizzaGrid2{
-          width:700px;
-        }
-        .pizzachild-3{
-          gap:20px;
-        }
-      }
-      @media (width <= 768px){
-        .pizzaGrid1{
-          width:500px;
-          grid-template-rows: 280px; 
-        }
-        .pizzaGrid2{
-          width:500px;
-        }
-      }
-
-      /* media query start */
-
-    </style>
-   
-  </head>
-
-  <body>
-    <!-- section 1 starts here -->
-    <section class="section-1-container container">
-      <div class="grid-template-container">
-        <div class="grid-container">
-          <div class="item item1">
-            <div class="overlay">
-              <div class="text">
-                Cupcake: "Delicious, fluffy cupcakes with creamy frosting."
-              </div>
+<body>
+    <!-- front page start-->
+    <div class="main-section">
+        <header>
+            <nav class="container">
+                <div class="nav-logo">
+                    <img src="./images/logo/Logo maker project (2) (1).svg" alt="">
+                </div>
+                <div class="nav-links">
+                    <a href="#home">Home</a>
+                    <a href="#home">About</a>
+                    <a href="#home">Culinary delight</a>
+                    <a href="#home">Our Stories</a>
+                    <a href="#home">Book a Table</a>
+                </div>
+            </nav>
+        </header>
+        <main class="hero-section container">
+            <!-- <div class="main-image-1">
+                <div class="card-1">
+                    <span></span>
+                </div>
+                <div class="card-2">
+                    <span></span>
+                </div>
+                <div class="card-3">
+                    <span></span>
+                </div>
+            </div> -->
+            <div class="main-text">
+                We Only <span>Serve</span> what we are really <span>good</span> at
             </div>
-          </div>
-          <div class="item item2">
-            <div class="overlay">
-              <div class="text">
-                "Pizza: "Hot, cheesy pizza with your favorite toppings."
-              </div>
+            <!-- <div class="main-image-1">
+                <div class="card-1">
+                    <span></span>
+                </div>
+                <div class="card-2">
+                    <span></span>
+                </div>
+                <div class="card-3">
+                    <span></span>
+                </div>
+            </div> -->
+        </main>
+    </div>
+
+    <!-- front page end -->
+
+    <!-- carousal start here -->
+    <section>
+        <div class="container carousal-section">
+            <div class="carousal-text">
+                <h2>Our Specialities</h2>
+                <span> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, delectus.</span>
             </div>
-          </div>
-          <div class="item item3">
-            <div class="overlay">
-              <div class="text">
-                "Coffee: "Freshly brewed coffee with a rich aroma."
-              </div>
+            <div class="owl-carousel">
+                <div class="item">
+                    <div class="ca-1"></div>
+                </div>
+                <div class="item">
+                    <div class="ca-2"></div>
+                </div>
+                <div class="item">
+                    <div class="ca-3"></div>
+                </div>
+                <div class="item">
+                    <div class="ca-4"></div>
+                </div>
+                <div class="item">
+                    <div class="ca-5"></div>
+                </div>
             </div>
-          </div>
-          <div class="item item4">
-            <div class="overlay">
-              <div class="text">
-                "Noodles: "Tasty noodles in a savory sauce."
-              </div>
-            </div>
-          </div>
-          <div class="item item5">
-            <div class="overlay">
-              <div class="text">
-                "Croissant: "Flaky, buttery croissants baked to perfection."
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
-      <div class="description">
-        <h1>A Tradition of Excellence and Quality</h1>
-        <p>
-          Our commitment to quality and excellence has remained unwavering. Each
-          dish is crafted with the finest ingredients, ensuring every bite is a
-          memorable experience. Join us at TOOGOOD, and become a part of our
-          ever-growing family.
-        </p>
-      </div>
+    </section>
+    <!-- carousal end here -->
+
+
+    <!-- section 1 starts here -->
+    <section class="section-1">
+
+        <div class="section-1-container">
+
+            <div class="section-1-description">
+                <h1>A Tradition of Excellence and Quality</h1>
+                <p>
+                    Our commitment to quality and excellence has remained unwavering. Each
+                    dish is crafted with the finest ingredients, ensuring every bite is a
+                    memorable experience. Join us at TOOGOOD, and become a part of our
+                    ever-growing family.
+                </p>
+            </div>
+
+            <div class="section-1-grid">
+
+                <div class="grid-container">
+
+                    <div class="grid-item item1">
+                        <div class="overlay">
+                            <div class="text">
+                                Cupcake: "Delicious, fluffy cupcakes with creamy frosting."
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid-item item2">
+                        <div class="overlay">
+                            <div class="text">
+                                "Pizza: "Hot, cheesy pizza with your favorite toppings."
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid-item item3">
+                        <div class="overlay">
+                            <div class="text">
+                                "Coffee: "Freshly brewed coffee with a rich aroma."
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid-item item4">
+                        <div class="overlay">
+                            <div class="text">
+                                "Noodles: "Tasty noodles in a savory sauce."
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid-item item5">
+                        <div class="overlay">
+                            <div class="text">
+                                "Croissant: "Flaky, buttery croissants baked to perfection."
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
     </section>
     <!-- section 1 ends here -->
 
     <!-- section 4 start here ashutosh -->
 
+
     <section class="container icon-image-section">
-      <div>
-        <h2>In Accociation With</h2>
-      </div>
-      <div class="icon-image-container">
-        <div class="icon-box box1">
-          <img src="./images/otherImages/section7/img1.png" alt="" />
-          <img src="./images/otherImages/section7/img1.1.jpg" alt="" />
+        <div>
+            <h2>In Accociation With</h2>
         </div>
-        <div class="icon-box box2">
-          <img src="./images/otherImages/section7/img2.png" alt="" />
-          <img src="./images/otherImages/section7/img2.1.png" alt="" />
+        <div class="icon-image-container">
+            <div class="icon-box box1">
+                <img src="./images/otherImages/section7/img1.png" alt="" />
+                <img src="./images/otherImages/section7/img1.1.jpg" alt="" />
+            </div>
+            <div class="icon-box box2">
+                <img src="./images/otherImages/section7/img2.png" alt="" />
+                <img src="./images/otherImages/section7/img2.1.png" alt="" />
+            </div>
+            <div class="icon-box box3">
+                <img src="./images/otherImages/section7/img4.png" alt="" />
+                <img src="./images/otherImages/section7/img3.1.jpg" alt="" />
+            </div>
+            <div class="icon-box box4">
+                <img src="./images/otherImages/section7/img3.png" alt="" />
+                <img src="./images/otherImages/section7/img4.1.jpg" alt="" />
+            </div>
+            <div class="icon-box box5">
+                <img src="./images/otherImages/section7/img9.png" alt="" />
+                <img src="./images/otherImages/section7/img5.1.jpg" alt="" />
+            </div>
+            <div class="icon-box box6">
+                <img src="./images/otherImages/section7/img6.png" alt="" />
+                <img src="./images/otherImages/section7/img6.1.jpg" alt="" />
+            </div>
+            <div class="icon-box box7">
+                <img src="./images/otherImages/section7/img7.png" alt="" />
+                <img src="./images/otherImages/section7/img7.1.jpg" alt="" />
+            </div>
+            <div class="icon-box box8">
+                <img src="./images/otherImages/section7/img8.png" alt="" />
+                <img src="./images/otherImages/section7/img8.1.jpg" alt="" />
+            </div>
         </div>
-        <div class="icon-box box3">
-          <img src="./images/otherImages/section7/img4.png" alt="" />
-          <img src="./images/otherImages/section7/img3.1.jpg" alt="" />
-        </div>
-        <div class="icon-box box4">
-          <img src="./images/otherImages/section7/img3.png" alt="" />
-          <img src="./images/otherImages/section7/img4.1.jpg" alt="" />
-        </div>
-        <div class="icon-box box5">
-          <img src="./images/otherImages/section7/img9.png" alt="" />
-          <img src="./images/otherImages/section7/img5.1.jpg" alt="" />
-        </div>
-        <div class="icon-box box6">
-          <img src="./images/otherImages/section7/img6.png" alt="" />
-          <img src="./images/otherImages/section7/img6.1.jpg" alt="" />
-        </div>
-        <div class="icon-box box7">
-          <img src="./images/otherImages/section7/img7.png" alt="" />
-          <img src="./images/otherImages/section7/img7.1.jpg" alt="" />
-        </div>
-        <div class="icon-box box8">
-          <img src="./images/otherImages/section7/img8.png" alt="" />
-          <img src="./images/otherImages/section7/img8.1.jpg" alt="" />
-        </div>
-      </div>
     </section>
 
     <!-- section 4 end here ashutosh -->
 
-   
+    <!-- Menu section start Deepak -->
+    <div class="parent">
 
-   
+        <div class="forMenu">
+            <h1>
+                Unforgettable Experiences At Our Cafe
+            </h1>
+            <p>
+                Discover the essence of luxury and comfort with unforgettable experiences at our Cafe. From the moment
+                you arrive, you'll be immersed in a world of elegance and personalized service designed to make your
+                stay extraordinary.
+            </p>
+            <hr class="hr1">
+            <p>
+                “You can’t buy happiness, but you can buy coffee, and that’s pretty close.”
+            </p>
+            <hr class="hr2">
+            <div>
+                <button class="btn">Read More</button>
+            </div>
+        </div>
+        <div class="forMenuImages">
+            <div>
+                <img style="width: 100%; height: 100%; border-radius: 0px 60px 0px 60px; "
+                    src="https://images.pexels.com/photos/4940719/pexels-photo-4940719.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    alt="" />
+            </div>
+            <div>
+                <img style="width: 100%; height: 100%; border-radius: 60px 0px 60px 0px; "
+                    src="https://images.pexels.com/photos/3838633/pexels-photo-3838633.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    alt="" />
+            </div>
+            <div>
+                <img style="width: 100%; height: 100%; border-radius: 60px 0px 60px 0px; "
+                    src="https://images.pexels.com/photos/3843224/pexels-photo-3843224.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    alt="" />
+            </div>
+            <div>
+                <img style="width: 100%; height: 100%; border-radius: 0px 60px 0px 60px;box-shadow: 2px 4px 6px black; "
+                    src="https://images.pexels.com/photos/3843225/pexels-photo-3843225.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    alt="" />
+            </div>
+
+
+        </div>
+    </div>
+    <!-- End menu section -->
+
 
     <!-- Section for pizza corner (Deepak) -->
 
-    <section class="pizza container">
+    <section class="pizza container ">
 
-      <!-- For just animation -->
+        <!-- For just animation -->
 
-      <div class="italic" >
-        <img src="images/otherImages/sectionPizza/cooking-food-italia-pizza-svgrepo-com.svg" alt="">
-      </div>
-      <div class="verticalLine"></div>
-      <div class="Knife" >
-        <img src="images/otherImages/sectionPizza/pizza-knife-svgrepo-com.svg"  alt="">
-      </div>
+        <div class="italic">
+            <img src="images/otherImages/sectionPizza/cooking-food-italia-pizza-svgrepo-com.svg" alt="">
+        </div>
+        <div class="verticalLine"></div>
+        <div class="Knife">
+            <img src="images/otherImages/sectionPizza/pizza-knife-svgrepo-com.svg" alt="">
+        </div>
 
-      <!-- Animation ending here -->
+        <!-- Animation ending here -->
 
+        <!-- Main Center Boxes -->
 
+        <div class="pizzaGrid1 container">
+            <div class="pizzachild-1">
+                <img class="pizzaSliceImg1" src="images/otherImages/sectionPizza/images-removebg-preview.png" alt="">
+                <h3 class="aboutPizza1">Delicious Pizza</h3>
+                <span class="aboutPizzaDesc1">Fast Food is a popular category they a
+                    emphasizes quick a service designer here us</span>
+                <button class="pizzaBtn1">Shop Now</button>
+            </div>
+            <div class="pizzachild-2">
+                <img class="pizzaSliceImg2" src="images/otherImages/sectionPizza/images-removebg-preview (1).png"
+                    alt="">
+                <h3 class="aboutPizza2">Dinner</h3>
+                <p class="aboutPizzaDesc2">Fast Food is a popular category they a emphasizes
+                    quick a service designer here us</p>
+                <button class="pizzaBtn2">Shop Now</button>
+            </div>
 
-       <!-- Main Center Boxes -->
+        </div>
 
-      <div class="pizzaGrid1" >
-         <div class="pizzachild-1">
-          <img class="pizzaSliceImg1" src="images/otherImages/sectionPizza/images-removebg-preview.png"    alt="">
-          <h3 class="aboutPizza1" >Delicious Pizza</h3>
-          <span class="aboutPizzaDesc1">Fast Food is a popular category they a emphasizes quick a service designer here us</span>
-          <button class="pizzaBtn1" >Shop Now</button>
-         </div>
-         <div class="pizzachild-2" >
-          <img class="pizzaSliceImg2" src="images/otherImages/sectionPizza/images-removebg-preview (1).png"  alt="">
-          <h3 class="aboutPizza2" >Dinner</h3>
-          <p class="aboutPizzaDesc2">Fast Food is a popular category they a emphasizes quick a service designer here us</p>
-           <button class="pizzaBtn2">Shop Now</button>
-         </div>
-         
-      </div>
-      
-        <div class="pizzaGrid2">
-         <div class="pizzachild-3" >
-          <img class="pizzaSliceImg3" src="images/otherImages/sectionPizza/360_F_561828375_KCtTuNdpQTjHrMqDrcoCpoLaYhLrZQdI-removebg-preview.png"  alt="">
-          <div>
-          <h1 class="aboutPizza3" >Best Burger</h1>
-          <p class="aboutPizzaDesc3">Fast Food is a popular category they a emphasizes quick a service designer here </p>
-          <button class="pizzaBtn3">Shop Now</button>
-          </div>
-         </div>
-         <div class="pizzachild-4">
-          <h1 class="aboutPizza4">Where Taste Meet Us Tradition</h1>
-          <button class="pizzaBtn4">Shop Now</button>
+        <div class="pizzaGrid2 container">
+            <div class="pizzachild-3">
+                <img class="pizzaSliceImg3"
+                    src="images/otherImages/sectionPizza/360_F_561828375_KCtTuNdpQTjHrMqDrcoCpoLaYhLrZQdI-removebg-preview.png"
+                    alt="">
+                <div>
+                    <h1 class="aboutPizza3">Best Burger</h1>
+                    <p class="aboutPizzaDesc3">Fast Food is a popular category they a
+                        emphasizes quick a service designer here </p>
+                    <button class="pizzaBtn3">Shop Now</button>
+                </div>
+            </div>
+            <div class="pizzachild-4">
+                <h1 class="aboutPizza4">Where Taste Meet Us Tradition</h1>
+                <button class="pizzaBtn4">Shop Now</button>
 
-         </div>
-      </div>
-    
-      <!-- Main Center Boxes End -->
+            </div>
+        </div>
+
+        <!-- Main Center Boxes End -->
 
     </section>
     <!-- Pizza section end -->
-  </body>
+
+
+<!-- feedback section start which contain some text and one sliding animation div (start)-->
+
+    <div class="feedback_section container">
+      <!-- 1)it contain 2 background image(1st burger, 2nd coffee) some text -->
+      <!-- <img
+        src="./images/feedbacksection/burger.png"
+        alt=""
+      />
+      <img src="./images/feedbacksection/coffee.png" alt="" /> -->
+
+      <h3><em>Testimonials</em></h3>
+      <h2>Our Customers Feedback</h2>
+      <!-- 1) stop here -->
+
+      <!-- this is the feedback card sliding part big div box where all card will slide start -->
+      <div class="slider">
+        <div class="list">
+          <!-- (a)first review card start -->
+          <div class="review_card card_1">
+            <div class="review_section">
+              <img
+                src="./images/feedbacksection/double quote.svg"
+                alt="double quote"
+              />
+              <p>
+                "Best avocado toast ever! Perfectly toasted bread, creamy
+                avocado, cherry tomatoes, and feta make it delicious."
+              </p>
+            </div>
+
+            <img
+              src="./images/feedbacksection/firstcard profile pic.png"
+              alt="profile pic"
+            />
+            <div class="rating">
+              <h3>Bidisha saha</h3>
+              <div style="padding-top: 5px">
+                <i class="fa-solid fa-star fa-xl" style="color: #ffd43b"></i>
+                <i class="fa-solid fa-star fa-xl" style="color: #ffd43b"></i>
+                <i class="fa-solid fa-star fa-xl" style="color: #ffd43b"></i>
+                <i class="fa-solid fa-star fa-xl" style="color: #ffd43b"></i>
+                <i class="fa-solid fa-star fa-xl" style="color: #ffd43b"></i>
+              </div>
+            </div>
+          </div>
+          <!-- (a)first review card end -->
+          <!-- (b)second review card start -->
+          <div class="review_card card_1">
+            <div class="review_section">
+              <img
+                src="./images/feedbacksection/double quote.svg"
+                alt="double quote"
+              />
+              <p>
+                "The cappuccino was perfect: rich, robust coffee with light,
+                creamy foam. High-quality beans and skilled baristas."
+              </p>
+            </div>
+
+            <img
+              src="./images/feedbacksection/deepak dhayani.png"
+              alt="deepak dhayani"
+            />
+            <div class="rating">
+              <h3>Deepak Dhayani</h3>
+              <div style="padding-top: 5px">
+                <i class="fa-solid fa-star fa-xl" style="color: #ffd43b"></i>
+                <i class="fa-solid fa-star fa-xl" style="color: #ffd43b"></i>
+                <i class="fa-solid fa-star fa-xl" style="color: #ffd43b"></i>
+                <i class="fa-solid fa-star fa-xl" style="color: #ffd43b"></i>
+                <i class="fa-solid fa-star fa-xl" style="color: #ffd43b"></i>
+              </div>
+            </div>
+          </div>
+          <!-- (b)second review card end -->
+          <!-- (c)third review card start -->
+          <div class="review_card card_1">
+            <div class="review_section">
+              <img
+                src="./images/feedbacksection/double quote.svg"
+                alt="double quote"
+              />
+              <p>
+                "Moist, fluffy blueberry muffin packed with juicy berries. Not
+                overly sweet, ideal with a cup of coffee."
+              </p>
+            </div>
+
+            <img
+              src="./images/feedbacksection/ayesha shaikh.png"
+              alt="ayesha shaikh"
+            />
+            <div class="rating">
+              <h3>Ayesha Shaikh</h3>
+              <div style="padding-top: 5px">
+                <i class="fa-solid fa-star fa-xl" style="color: #ffd43b"></i>
+                <i class="fa-solid fa-star fa-xl" style="color: #ffd43b"></i>
+                <i class="fa-solid fa-star fa-xl" style="color: #ffd43b"></i>
+                <i class="fa-solid fa-star fa-xl" style="color: #ffd43b"></i>
+                <i class="fa-solid fa-star fa-xl" style="color: #d6d5d1"></i>
+              </div>
+            </div>
+          </div>
+          <!-- (c)third review card end -->
+          <!-- (d)fourth review card start -->
+          <div class="review_card card_1">
+            <div class="review_section">
+              <img
+                src="./images/feedbacksection/double quote.svg"
+                alt="double quote"
+              />
+              <p>
+                "Delightful quiche Lorraine with a buttery, flaky crust and
+                rich, flavorful filling. Great savory brunch option."
+              </p>
+            </div>
+
+            <img
+              src="./images/feedbacksection/asutosh pal.png"
+              alt="asutosh sahu"
+            />
+            <div class="rating">
+              <h3>Asutosh Sahu</h3>
+              <div style="padding-top: 5px">
+                <i class="fa-solid fa-star fa-xl" style="color: #ffd43b"></i>
+                <i class="fa-solid fa-star fa-xl" style="color: #ffd43b"></i>
+                <i class="fa-solid fa-star fa-xl" style="color: #ffd43b"></i>
+                <i class="fa-solid fa-star fa-xl" style="color: #ffd43b"></i>
+                <i class="fa-solid fa-star fa-xl" style="color: #ffd43b"></i>
+              </div>
+            </div>
+          </div>
+          <!-- (d)fourth review card end -->
+          <!-- (e)fifth review card start -->
+          <div class="review_card card_1">
+            <div class="review_section">
+              <img
+                src="./images/feedbacksection/double quote.svg"
+                alt="double quote"
+              />
+              <p>
+                "Colorful vegan Buddha bowl with fresh veggies, quinoa, and
+                delicious tahini dressing. Wholesome and satisfying."
+              </p>
+            </div>
+
+            <img
+              src="./images/feedbacksection/sambit pal.png"
+              alt="sambit pal"
+            />
+            <div class="rating">
+              <h3>Sambit Pal</h3>
+              <div style="padding-top: 5px">
+                <i class="fa-solid fa-star fa-xl" style="color: #ffd43b"></i>
+                <i class="fa-solid fa-star fa-xl" style="color: #ffd43b"></i>
+                <i class="fa-solid fa-star fa-xl" style="color: #ffd43b"></i>
+                <i class="fa-solid fa-star fa-xl" style="color: #ffd43b"></i>
+
+                <i class="fa-solid fa-star fa-xl" style="color: #d6d5d1"></i>
+              </div>
+            </div>
+          </div>
+          <!--(e)fifth review card end -->
+          <!-- (f)sixth review card start -->
+          <div class="review_card card_1">
+            <div class="review_section">
+              <img
+                src="./images/feedbacksection/double quote.svg"
+                alt="double quote"
+              />
+              <p>
+                "Fantastic chicken Caesar salad: perfectly grilled chicken,
+                creamy dressing, and crunchy croutons. Light and tasty."
+              </p>
+            </div>
+
+            <img
+              src="./images/feedbacksection/sanjay malik.png"
+              alt="sanjay malik"
+            />
+            <div class="rating">
+              <h3>Sanjay Malik</h3>
+              <div style="padding-top: 5px">
+                <i class="fa-solid fa-star fa-xl" style="color: #ffd43b"></i>
+                <i class="fa-solid fa-star fa-xl" style="color: #ffd43b"></i>
+                <i class="fa-solid fa-star fa-xl" style="color: #ffd43b"></i>
+                <i class="fa-solid fa-star fa-xl" style="color: #ffd43b"></i>
+
+                <i class="fa-solid fa-star fa-xl" style="color: #d6d5d1"></i>
+              </div>
+            </div>
+          </div>
+          <!-- (f)sixth review card end -->
+          <!-- (g)seventh review card start -->
+          <div class="review_card card_1">
+            <div class="review_section">
+              <img
+                src="./images/feedbacksection/double quote.svg"
+                alt="double quote"
+              />
+              <p>
+                "Out of this world French toast! Thick, custardy bread topped
+                with fresh berries and maple syrup. A breakfast treat."
+              </p>
+            </div>
+
+            <img
+              src="./images/feedbacksection/sidhu singh.png"
+              alt="sidhu singh"
+            />
+            <div class="rating">
+              <h3>Sidhu Singh</h3>
+              <div style="padding-top: 5px">
+                <i class="fa-solid fa-star fa-xl" style="color: #ffd43b"></i>
+                <i class="fa-solid fa-star fa-xl" style="color: #ffd43b"></i>
+                <i class="fa-solid fa-star fa-xl" style="color: #ffd43b"></i>
+                <i class="fa-solid fa-star fa-xl" style="color: #ffd43b"></i>
+                <i class="fa-solid fa-star fa-xl" style="color: #ffd43b"></i>
+              </div>
+            </div>
+          </div>
+          <!-- (g)seventh review card end -->
+          <!-- (h)eight review card start -->
+          <div class="review_card card_1">
+            <div class="review_section">
+              <img
+                src="./images/feedbacksection/double quote.svg"
+                alt="double quote"
+              />
+              <p>
+                "Divine lemon tart with a crisp crust and tangy-sweet filling.
+                Just the right amount of lemony goodness."
+              </p>
+            </div>
+
+            <img
+              src="./images/feedbacksection/sunil saha.png"
+              alt="sunil saha"
+            />
+            <div class="rating">
+              <h3>Sunil Saha</h3>
+              <div style="padding-top: 5px">
+                <i class="fa-solid fa-star fa-xl" style="color: #ffd43b"></i>
+                <i class="fa-solid fa-star fa-xl" style="color: #ffd43b"></i>
+                <i class="fa-solid fa-star fa-xl" style="color: #ffd43b"></i>
+                <i class="fa-solid fa-star fa-xl" style="color: #ffd43b"></i>
+
+                <i class="fa-solid fa-star fa-xl" style="color: #d6d5d1"></i>
+              </div>
+            </div>
+          </div>
+          <!-- (h)eight review card end -->
+        </div>
+      </div>
+    </div>
+
+    <!-- feedback section end which contain some text and one sliding animation div (end)-->
+    <!-- footer section made by shouvick (start) -->
+    <footer>
+      <div class="footerpart_outerdiv">
+        <div class="footerpart_innerdiv">
+          <!-- footer first section that hols social media icon and store icon (start) -->
+          <div class="contaier_forlogo_icons">
+            <div class="footer_icon footer_hover_effect">
+              <img src="./images/logo/Logo maker project (2) (1).png" alt="" />
+            </div>
+            <div class="footer_socialmedia">
+              <div class="footer_hover_effect">
+                <img
+                  src="./images/feedbacksection/facebooklogo.svg"
+                  alt="facebooklogo"
+                />
+              </div>
+              <div class="footer_hover_effect">
+                <img
+                  src="./images/feedbacksection/twitter_icon.svg"
+                  alt="twitter_icon"
+                />
+              </div>
+              <div class="footer_hover_effect">
+                <img
+                  src="./images/feedbacksection/instagram_icon.svg"
+                  alt="instagram_icon"
+                />
+              </div>
+              <div class="footer_hover_effect">
+                <img
+                  src="./images/feedbacksection/youtube_icon.svg"
+                  alt="youtube_icon"
+                />
+              </div>
+            </div>
+            <!-- footer first section that hols social media icon and store icon (end) -->
+            <!-- footer middle section that has 4 column (start) -->
+          </div>
+          <div class="footer_content">
+            <div class="footer_content_column">
+              <h1>Subcribe Our Newslatter</h1>
+              <div>
+                <form action="#">
+                  <input type="email" placeholder="Email Adress" />
+                  <button type="submit">submit</button>
+                </form>
+              </div>
+            </div>
+            <div class="footer_content_column">
+              <h2>Quick links</h2>
+              <span>About Us</span>
+              <span>Service</span>
+              <span>Contact Us</span>
+              <span>Blog Post</span>
+              <span>Pricing</span>
+            </div>
+            <div class="footer_content_column">
+              <h2>Food Menu</h2>
+              <span>Breakfast Foods</span>
+              <span>Lunch Foods</span>
+              <span>chicken Burger</span>
+              <span>Chicken Sandwich</span>
+              <span>Dinner Foods</span>
+            </div>
+            <div class="footer_content_column" id="forth_column">
+              <h2>Contact</h2>
+              <div class="footer_hover_effect">
+                <img
+                  src="./images/feedbacksection/email-round_icon.svg"
+                  alt="email-round_icon"
+                  style="
+                    background-color: white;
+                    border-radius: 50%;
+                    width: 40px;
+                    height: 40px;
+                  "
+                />
+                <span>customer@toogood.com</span>
+              </div>
+              <div class="footer_hover_effect">
+                <img
+                  src="./images/feedbacksection/location-round_icon.svg"
+                  alt="location-round_icon.svg"
+                  style="
+                    background-color: white;
+                    border-radius: 50%;
+                    width: 40px;
+                    height: 40px;
+                  "
+                />
+                <span>sector 4 gurugram,harayana</span>
+              </div>
+              <div class="footer_hover_effect">
+                <img
+                  src="./images/feedbacksection/phone-call_icon.svg"
+                  alt="phone-call_icon.svg"
+                  style="
+                    background-color: white;
+                    border-radius: 50%;
+                    width: 40px;
+                    height: 40px;
+                  "
+                />
+                <span>01245789321, 012457895146</span>
+              </div>
+            </div>
+          </div>
+          <!-- footer middle section that has 4 column (end) -->
+          <!-- div footer last section that holds t&c and some other thing (start)  -->
+          <div class="footer_last_div">
+            <div><span>Yoursitename 2024 | All Rights Reserved</span></div>
+            <div>
+              <span>Trams & Condition</span>
+              <span>Privacy Policy</span>
+              <span>Contact Us</span>
+            </div>
+
+            <!-- div footer last section that holds t&c and some other thing (end)  -->
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- footer section made by shouvick (end) -->
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        $('.owl-carousel').owlCarousel({
+            loop: true,
+            margin: 10,
+            autoplay: true,
+            autoplayTimeout: 3000,
+            stagePadding: 50,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 3
+                },
+                1000: {
+                    items: 5
+                }
+            }
+        })
+    </script>
+</body>
+
 </html>
