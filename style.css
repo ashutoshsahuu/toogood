@@ -1133,7 +1133,7 @@ nav {
 div.footerpart_outerdiv {
     background-color: #0f1630;
     border: 1px solid;
-    width: 100%;
+    width: 100vw;
     height: auto;
     /* display: flex;
     flex-direction: column;
@@ -1174,7 +1174,7 @@ div.footer_socialmedia {
     /*     border: 1px solid white; */
     height: 60px;
     display: flex;
-
+    padding-right: 20px;
     gap: 20px;
     justify-content: space-evenly;
 }
@@ -1186,22 +1186,23 @@ div.footer_socialmedia>div {
     display: flex;
     justify-content: center;
     align-items: center;
+    /* border: 1px solid white; */
     /*     border: 1px solid white; */
     background-color: white;
+    transition: background-color .5s;
 }
 
 div.footer_socialmedia>div>img {
     width: 50px;
     height: 50px;
-    border-radius: 50%;
-
-
+    border-radius: 50%;    
 }
 
 /* it is the middle portion of footer that has four column */
 div.footer_content {
     width: 1440px;
     height: 300px;
+    /* border: 1px solid white; */
     /*     border: 1px solid white; */
     margin-top: 60px;
     display: grid;
@@ -1217,6 +1218,16 @@ div.footer_content>div.footer_content_column {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    
+}
+div.footer_content>div.footer_content_column span{
+    transition: transform 1s;
+    
+}
+
+div.footer_content>div.footer_content_column span:hover{
+    transform: translateX(10px);
+    cursor: pointer;
 }
 
 div.footer_content_column>h1 {
@@ -1227,9 +1238,10 @@ div.footer_content_column>div>form>input {
     width: 300px;
     height: 40px;
     background-color: #0f1630;
+    padding-left: 20px;
     color: white;
     border-radius: 10px;
-    /*     border: 1px solid white; */
+    border: 1px solid white;
 
 }
 
@@ -1248,7 +1260,7 @@ div.footer_content_column>div>form>button:hover {
 
 div.footer_content_column>div>form>input::placeholder {
     color: white;
-    padding: 10px;
+    
     margin: 0px;
 }
 
@@ -1271,6 +1283,7 @@ div.footer_last_div {
     display: flex;
     align-items: center;
     color: white;
+    border-top: 1px solid white;
     padding: 0px 10px 0px 10px;
     justify-content: space-between;
 }
@@ -1280,9 +1293,87 @@ div.footer_last_div>div {
     height: 40px;
     display: flex;
     gap: 20px;
+    padding-right: 20px;
     align-items: center;
 }
+@media (width<=1200px){
+    div.footerpart_outerdiv{
+        border: none;
+        background-color: white;
+    }
 
+}
+@media (width<=768px){
+    
+    div.footerpart_innerdiv{
+        height: 800px;
+        /* need to adjust */
+        padding: 20px;
+    }
+    div.contaier_forlogo_icons{
+       
+        justify-content: baseline;
+    }
+    div.footer_socialmedia{
+        margin-right: 400px;
+    }
+    div.footer_content{
+        grid-template-columns: repeat(2,1fr);
+        gap: 20px;
+    }
+
+    div.footer_last_div{
+        justify-content: baseline;
+       margin-top: 220px;
+        padding: 0px;
+    }
+    div.footer_last_div>div:nth-child(2){
+        margin-right: 360px;
+    }
+}
+@media (width<=480px){
+    div.footerpart_innerdiv{
+        height: 500px;
+        /* need to adjust */
+        padding: 20px;
+    }
+    div.contaier_forlogo_icons{
+        flex-direction: column;
+        height: 160px;
+        border-top: 0px;
+    }
+    div.footer_socialmedia{
+        margin-right: 0px;
+    }
+    div.footer_socialmedia{
+        margin-bottom: 10px;
+    }
+    div.footer_content{
+        grid-template-columns: repeat(1,1fr);
+    }
+    div.footer_content>div.footer_content_column{
+        align-items: center;
+        
+    }
+    div.footer_content>div.footer_content_column:nth-of-type(2){
+        display: none;
+    }
+    div.footer_content>div.footer_content_column:nth-of-type(3){
+        display: none;
+    }
+    div.footer_content>div.footer_content_column:nth-of-type(4){
+        display: none;
+    }
+    div.footer_last_div{
+        
+       margin-top: 20px;
+        
+    }div.footer_last_div>div:nth-child(2){
+        display: none;
+    }
+
+
+}
 /* footer page styling end BY SHOUVICK */
 
 /* Pizza Section styling Here */
