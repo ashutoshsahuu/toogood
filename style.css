@@ -26,7 +26,9 @@
 .container {
     max-width: 1440px;
     margin: auto;
+    
 }
+
 
 
 /* first page starts */
@@ -1154,6 +1156,10 @@ nav {
 
 }
 
+
+.feedback_section>h3{
+
+
 /* .feedback_section>img:nth-of-type(1){
     position: absolute;
     width: 100px;
@@ -1172,6 +1178,7 @@ nav {
 
 }  */
 .feedback_section>h3 {
+
     text-align: center;
     font-family: "Great Vibes", cursive;
     font-size: 35px;
@@ -1822,4 +1829,47 @@ div.footer_last_div>div {
     font-family: 'Jost', sans-serif;
 }
 
+
 /* Second Grid Styling ends here */
+
+/* media query start */
+@media (width <=968px) {
+    .verticalLine {
+        display: none;
+    }
+
+    .Knife {
+        display: none;
+    }
+
+    .italic {
+        display: none;
+    }
+
+    .pizzaGrid1 {
+        width: 700px;
+    }
+
+    .pizzaGrid2 {
+        width: 700px;
+    }
+
+    .pizzachild-3 {
+        gap: 20px;
+    }
+}
+
+@media (width <=768px) {
+    .pizzaGrid1 {
+        width: 500px;
+        grid-template-rows: 280px;
+    }
+
+    .pizzaGrid2 {
+        width: 500px;
+    }
+}
+
+/* Media query ends here */
+
+
