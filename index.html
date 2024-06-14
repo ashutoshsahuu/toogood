@@ -126,7 +126,7 @@
         border: none; 
         color: white; 
         cursor: pointer; 
-        width: 45%; 
+        width: 120px; 
         font-family: 'Jost', sans-serif;
       }
       .pizzachild-2{
@@ -156,7 +156,7 @@
         padding: 1rem 1.5rem; 
         border: none; color: white; 
         cursor: pointer; 
-        width: 25%; 
+        width: 120px; 
         margin: 10px 30px 30px; 
         font-family: 'Jost', sans-serif;
       }
@@ -211,7 +211,7 @@
         border: none; 
         color: white; 
         cursor: pointer; 
-        width: 55%;  
+        width: 120px; 
         font-family: 'Jost', sans-serif;
       }
       .pizzachild-4{
@@ -240,11 +240,42 @@
         border: none; 
         color: white; 
         cursor: pointer; 
-        width: 45%;  
+        width: 120px;  
         font-family: 'Jost', sans-serif;
       }
 
       /* Second Grid Styling ends here */
+      @media (width <= 968px){
+        .verticalLine{
+          display: none;
+        }
+        .Knife{
+          display: none;
+        }
+        .italic{
+          display: none;
+        }
+        .pizzaGrid1{
+          width:700px;
+        }
+        .pizzaGrid2{
+          width:700px;
+        }
+        .pizzachild-3{
+          gap:20px;
+        }
+      }
+      @media (width <= 768px){
+        .pizzaGrid1{
+          width:500px;
+          grid-template-rows: 280px; 
+        }
+        .pizzaGrid2{
+          width:500px;
+        }
+      }
+
+      /* media query start */
 
     </style>
    
@@ -348,317 +379,9 @@
 
     <!-- section 4 end here ashutosh -->
 
-    <!-- Menu section start Deepak -->
-    <div class="parent">
-      <div class="forMenu">
-        <h1>Unforgettable Experiences At Our Cafe</h1>
-        <p>
-          Discover the essence of luxury and comfort with unforgettable
-          experiences at our Cafe. From the moment you arrive, you'll be
-          immersed in a world of elegance and personalized service designed to
-          make your stay extraordinary.
-        </p>
-        <hr class="hr1" />
-        <p>
-          “You can’t buy happiness, but you can buy coffee, and that’s pretty
-          close.”
-        </p>
-        <hr class="hr2" />
-        <div>
-          <button class="btn">Read More</button>
-        </div>
-      </div>
-      <div class="forMenuImages">
-        <div>
-          <img
-            style="width: 100%; height: 100%; border-radius: 0px 60px 0px 60px"
-            src="https://images.pexels.com/photos/4940719/pexels-photo-4940719.jpeg?auto=compress&cs=tinysrgb&w=600"
-            alt=""
-          />
-        </div>
-        <div>
-          <img
-            style="width: 100%; height: 100%; border-radius: 60px 0px 60px 0px"
-            src="https://images.pexels.com/photos/3838633/pexels-photo-3838633.jpeg?auto=compress&cs=tinysrgb&w=600"
-            alt=""
-          />
-        </div>
-        <div>
-          <img
-            style="width: 100%; height: 100%; border-radius: 60px 0px 60px 0px"
-            src="https://images.pexels.com/photos/3843224/pexels-photo-3843224.jpeg?auto=compress&cs=tinysrgb&w=600"
-            alt=""
-          />
-        </div>
-        <div>
-          <img
-            style="
-              width: 100%;
-              height: 100%;
-              border-radius: 0px 60px 0px 60px;
-              box-shadow: 2px 4px 6px black;
-            "
-            src="https://images.pexels.com/photos/3843225/pexels-photo-3843225.jpeg?auto=compress&cs=tinysrgb&w=600"
-            alt=""
-          />
-        </div>
-      </div>
-    </div>
-    <!-- End menu section -->
+   
 
-    <!-- feedback section start which contain some text and one sliding animation div-->
-
-    <div class="feedback_section container " >
-      <!-- 1)it contain 2 background image(1st burger, 2nd coffee) some text -->
-      <img src="./images/feedbacksection/burger.png" alt="" />
-      <img src="./images/feedbacksection/coffee.png" alt="" />
-      <h3><em>Testimonials</em></h3>
-      <h2>Our Customers Feedback</h2>
-      <!-- 1) stop here -->
-
-      <!-- this is the feedback card sliding part big div box where all card will slide start -->
-      <div class="slider" style="width: 100%;">
-        <div class="list">
-          <!-- (a)first review card start -->
-          <div class="review_card card_1">
-            <div class="review_section">
-              <img
-                src="./images/feedbacksection/double quote.svg"
-                alt="double quote"
-              />
-              <p>
-                "Best avocado toast ever! Perfectly toasted bread, creamy
-                avocado, cherry tomatoes, and feta make it delicious."
-              </p>
-            </div>
-
-            <img
-              src="./images/feedbacksection/firstcard profile pic - Copy.png"
-              alt="profile pic"
-            />
-            <div class="rating">
-              <h3>Bidisha saha</h3>
-              <div style="padding-top: 5px">
-                <i class="fa-solid fa-star fa-xl" style="color: #ffd43b"></i>
-                <i class="fa-solid fa-star fa-xl" style="color: #ffd43b"></i>
-                <i class="fa-solid fa-star fa-xl" style="color: #ffd43b"></i>
-                <i class="fa-solid fa-star fa-xl" style="color: #ffd43b"></i>
-                <i class="fa-solid fa-star fa-xl" style="color: #ffd43b"></i>
-              </div>
-            </div>
-          </div>
-          <!-- (a)first review card end -->
-          <!-- (b)second review card start -->
-          <div class="review_card card_1">
-            <div class="review_section">
-              <img
-                src="./images/feedbacksection/double quote.svg"
-                alt="double quote"
-              />
-              <p>
-                "The cappuccino was perfect: rich, robust coffee with light,
-                creamy foam. High-quality beans and skilled baristas."
-              </p>
-            </div>
-
-            <img
-              src="./images/feedbacksection/deepak dhayani.png"
-              alt="deepak dhayani"
-            />
-            <div class="rating">
-              <h3>Deepak Dhayani</h3>
-              <div style="padding-top: 5px">
-                <i class="fa-solid fa-star fa-xl" style="color: #ffd43b"></i>
-                <i class="fa-solid fa-star fa-xl" style="color: #ffd43b"></i>
-                <i class="fa-solid fa-star fa-xl" style="color: #ffd43b"></i>
-                <i class="fa-solid fa-star fa-xl" style="color: #ffd43b"></i>
-                <i class="fa-solid fa-star fa-xl" style="color: #ffd43b"></i>
-              </div>
-            </div>
-          </div>
-          <!-- (b)second review card end -->
-          <!-- (c)third review card start -->
-          <div class="review_card card_1">
-            <div class="review_section">
-              <img
-                src="./images/feedbacksection/double quote.svg"
-                alt="double quote"
-              />
-              <p>
-                "Moist, fluffy blueberry muffin packed with juicy berries. Not
-                overly sweet, ideal with a cup of coffee."
-              </p>
-            </div>
-
-            <img
-              src="./images/feedbacksection/ayesha shaikh.png"
-              alt="ayesha shaikh"
-            />
-            <div class="rating">
-              <h3>Ayesha Shaikh</h3>
-              <div style="padding-top: 5px">
-                <i class="fa-solid fa-star fa-xl" style="color: #ffd43b"></i>
-                <i class="fa-solid fa-star fa-xl" style="color: #ffd43b"></i>
-                <i class="fa-solid fa-star fa-xl" style="color: #ffd43b"></i>
-                <i class="fa-solid fa-star fa-xl" style="color: #ffd43b"></i>
-                <i class="fa-solid fa-star fa-xl" style="color: #d6d5d1"></i>
-              </div>
-            </div>
-          </div>
-          <!-- (c)third review card end -->
-          <!-- (d)fourth review card start -->
-          <div class="review_card card_1">
-            <div class="review_section">
-              <img
-                src="./images/feedbacksection/double quote.svg"
-                alt="double quote"
-              />
-              <p>
-                "Delightful quiche Lorraine with a buttery, flaky crust and
-                rich, flavorful filling. Great savory brunch option."
-              </p>
-            </div>
-
-            <img
-              src="./images/feedbacksection/asutosh pal.png"
-              alt="asutosh sahu"
-            />
-            <div class="rating">
-              <h3>Asutosh Sahu</h3>
-              <div style="padding-top: 5px">
-                <i class="fa-solid fa-star fa-xl" style="color: #ffd43b"></i>
-                <i class="fa-solid fa-star fa-xl" style="color: #ffd43b"></i>
-                <i class="fa-solid fa-star fa-xl" style="color: #ffd43b"></i>
-                <i class="fa-solid fa-star fa-xl" style="color: #ffd43b"></i>
-                <i class="fa-solid fa-star fa-xl" style="color: #ffd43b"></i>
-              </div>
-            </div>
-          </div>
-          <!-- (d)fourth review card end -->
-          <!-- (e)fifth review card start -->
-          <div class="review_card card_1">
-            <div class="review_section">
-              <img
-                src="./images/feedbacksection/double quote.svg"
-                alt="double quote"
-              />
-              <p>
-                "Colorful vegan Buddha bowl with fresh veggies, quinoa, and
-                delicious tahini dressing. Wholesome and satisfying."
-              </p>
-            </div>
-
-            <img
-              src="./images/feedbacksection/sambit pal.png"
-              alt="sambit pal"
-            />
-            <div class="rating">
-              <h3>Sambit Pal</h3>
-              <div style="padding-top: 5px">
-                <i class="fa-solid fa-star fa-xl" style="color: #ffd43b"></i>
-                <i class="fa-solid fa-star fa-xl" style="color: #ffd43b"></i>
-                <i class="fa-solid fa-star fa-xl" style="color: #ffd43b"></i>
-                <i class="fa-solid fa-star fa-xl" style="color: #ffd43b"></i>
-
-                <i class="fa-solid fa-star fa-xl" style="color: #d6d5d1"></i>
-              </div>
-            </div>
-          </div>
-          <!--(e)fifth review card end -->
-          <!-- (f)sixth review card start -->
-          <div class="review_card card_1">
-            <div class="review_section">
-              <img
-                src="./images/feedbacksection/double quote.svg"
-                alt="double quote"
-              />
-              <p>
-                "Fantastic chicken Caesar salad: perfectly grilled chicken,
-                creamy dressing, and crunchy croutons. Light and tasty."
-              </p>
-            </div>
-
-            <img
-              src="./images/feedbacksection/sanjay malik.webp"
-              alt="sanjay malik"
-            />
-            <div class="rating">
-              <h3>Sanjay Malik</h3>
-              <div style="padding-top: 5px">
-                <i class="fa-solid fa-star fa-xl" style="color: #ffd43b"></i>
-                <i class="fa-solid fa-star fa-xl" style="color: #ffd43b"></i>
-                <i class="fa-solid fa-star fa-xl" style="color: #ffd43b"></i>
-                <i class="fa-solid fa-star fa-xl" style="color: #ffd43b"></i>
-
-                <i class="fa-solid fa-star fa-xl" style="color: #d6d5d1"></i>
-              </div>
-            </div>
-          </div>
-          <!-- (f)sixth review card end -->
-          <!-- (g)seventh review card start -->
-          <div class="review_card card_1">
-            <div class="review_section">
-              <img
-                src="./images/feedbacksection/double quote.svg"
-                alt="double quote"
-              />
-              <p>
-                "Out of this world French toast! Thick, custardy bread topped
-                with fresh berries and maple syrup. A breakfast treat."
-              </p>
-            </div>
-
-            <img
-              src="./images/feedbacksection/sidhu singh.png"
-              alt="sidhu singh"
-            />
-            <div class="rating">
-              <h3>Sidhu Singh</h3>
-              <div style="padding-top: 5px">
-                <i class="fa-solid fa-star fa-xl" style="color: #ffd43b"></i>
-                <i class="fa-solid fa-star fa-xl" style="color: #ffd43b"></i>
-                <i class="fa-solid fa-star fa-xl" style="color: #ffd43b"></i>
-                <i class="fa-solid fa-star fa-xl" style="color: #ffd43b"></i>
-                <i class="fa-solid fa-star fa-xl" style="color: #ffd43b"></i>
-              </div>
-            </div>
-          </div>
-          <!-- (g)seventh review card end -->
-          <!-- (h)eight review card start -->
-          <div class="review_card card_1">
-            <div class="review_section">
-              <img
-                src="./images/feedbacksection/double quote.svg"
-                alt="double quote"
-              />
-              <p>
-                "Divine lemon tart with a crisp crust and tangy-sweet filling.
-                Just the right amount of lemony goodness."
-              </p>
-            </div>
-
-            <img
-              src="./images/feedbacksection/sunil saha.png"
-              alt="sunil saha"
-            />
-            <div class="rating">
-              <h3>Sunil Saha</h3>
-              <div style="padding-top: 5px">
-                <i class="fa-solid fa-star fa-xl" style="color: #ffd43b"></i>
-                <i class="fa-solid fa-star fa-xl" style="color: #ffd43b"></i>
-                <i class="fa-solid fa-star fa-xl" style="color: #ffd43b"></i>
-                <i class="fa-solid fa-star fa-xl" style="color: #ffd43b"></i>
-
-                <i class="fa-solid fa-star fa-xl" style="color: #d6d5d1"></i>
-              </div>
-            </div>
-          </div>
-          <!-- (h)eight review card end -->
-        </div>
-      </div>
-    </div>
-
-    <!-- feedback section end which contain some text and one sliding animation div-->
+   
 
     <!-- Section for pizza corner (Deepak) -->
 
