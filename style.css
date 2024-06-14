@@ -1014,8 +1014,8 @@ div.footerpart_innerdiv{
     display: flex;
     background-color: #0f1630;
     flex-direction: column;
-    border: 1px solid white;
-    border: 1px solid red;
+/*     border: 1px solid white; */
+/*     border: 1px solid red; */
 
 }
 div.contaier_forlogo_icons{
@@ -1033,7 +1033,7 @@ div.footer_icon>img{
     height: 50px;
 }
 div.footer_socialmedia{
-    border: 1px solid white;
+/*     border: 1px solid white; */
     height: 60px;
     display: flex;
     
@@ -1047,7 +1047,7 @@ div.footer_socialmedia>div{
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid white;
+/*     border: 1px solid white; */
     background-color: white;
 }
 div.footer_socialmedia>div>img{
@@ -1061,7 +1061,7 @@ div.footer_socialmedia>div>img{
 div.footer_content{
     width: 1440px;
     height: 300px;
-    border: 1px solid white;
+/*     border: 1px solid white; */
     margin-top: 60px;
     display: grid;
     grid-template-columns: 500px 300px 300px 340px;
@@ -1071,7 +1071,7 @@ div.footer_content{
 
 }
 div.footer_content>div.footer_content_column{
-    border: 1px solid white;
+/*     border: 1px solid white; */
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -1086,7 +1086,7 @@ div.footer_content_column>div>form>input{
     background-color: #0f1630;
     color: white;
     border-radius: 10px;
-    border: 1px solid white;
+/*     border: 1px solid white; */
    
 }
 div.footer_content_column>div>form>button{
@@ -1107,7 +1107,7 @@ div.footer_content_column>div>form>input::placeholder{
 }
 div#forth_column>div{
     display: flex;
-    border: 1px solid;
+/*     border: 1px solid; */
     align-items: center;
     gap: 20px;
 }
@@ -1116,7 +1116,7 @@ div#forth_column>div{
 }
 /* div footer last section that holds t&c and some other thing */
 div.footer_last_div{
-    border-top: 1px solid white;
+/*     border-top: 1px solid white; */
     width: 1440px;
     height: 60px;
     display: flex;
