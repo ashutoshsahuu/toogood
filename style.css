@@ -12,7 +12,6 @@
 /* end of shouvick font import */
 
 
-/* font-family: "Urbanist", sans-serif; */
 /* font-family: "Josefin Slab", serif; */
 /* font-family: "Jost", sans-serif; */
 
@@ -26,7 +25,7 @@
 .container {
     max-width: 1440px;
     margin: auto;
-    
+
 }
 
 
@@ -76,7 +75,7 @@ nav {
         background-color: transparent;
     }
 
-    30% {
+    20% {
         background-color: #121212;
     }
 
@@ -174,7 +173,7 @@ nav {
     to {
         transform: translateY(40%);
     }
-    
+
 
 
 }
@@ -256,24 +255,27 @@ nav {
     .nav-btn {
         display: none;
     }
+
     .main-text>span>img {
         width: 100px;
         height: 30px;
         margin: 20px 0px;
     }
-    
+
 }
 
 
 
 @media screen and (max-width : 426px) {
 
-    .nav-logo img{
+    .nav-logo img {
         width: 150px;
     }
-    .main-text{
+
+    .main-text {
         width: 90%;
     }
+
     .menu-btn {
         display: block;
     }
@@ -285,12 +287,13 @@ nav {
     .nav-btn {
         display: none;
     }
+
     .main-text>span>img {
         width: 100px;
         height: 30px;
         margin: 20px 0px;
     }
-    
+
 }
 
 
@@ -308,25 +311,25 @@ nav {
     gap: 4rem;
 }
 
-.carousal-text{
+.carousal-text {
     text-align: center;
 }
 
-.carousal-text h2{
+.carousal-text h2 {
     font-family: 'Forum', cursive;
     font-size: clamp(1.2rem, 3vw, 3rem);
     color: #DBB26B;
 }
 
-.carousal-text span{
+.carousal-text span {
     font-size: clamp(0.8rem, 3vw, 1.2rem);
     font-weight: 400;
     color: #121212;
     margin-top: 20px;
-    font-family: 'DM Sans' , sans-serif;
+    font-family: 'DM Sans', sans-serif;
 }
 
-.item{
+.item {
     padding: 20px;
 }
 
@@ -441,16 +444,16 @@ nav {
 }
 
 .section-1-description h1 {
-    font-size: 1.8rem;
+    font-size: clamp(1.5rem, 5vw, 1.8rem);
     color: #CD5334;
     font-weight: 800;
 }
 
 .section-1-description p {
-    font-size: 1rem;
+    font-size: clamp(0.7rem, 3vw, 1.2rem);
     font-weight: 700;
     color: #121212;
-    font-family: 'DM Sans' , sans-serif;
+    font-family: 'DM Sans', sans-serif;
     line-height: 22px;
 }
 
@@ -475,7 +478,6 @@ nav {
 
 
 .grid-container {
-    /* background-color: rgb(25, 197, 206); */
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(5, 1fr);
@@ -486,7 +488,6 @@ nav {
 
 .item1 {
     grid-area: 1 / 1 / 4 / 3;
-    background-color: rgb(0, 255, 21);
     background-image: url("../toogood/images/otherImages/section1/image-1.webp");
     background-position: center;
     background-size: cover;
@@ -495,7 +496,6 @@ nav {
 
 .item2 {
     grid-area: 1 / 3 / 4 / 4;
-    background-color: yellow;
     background-image: url("../toogood/images/otherImages/section1/image-2.webp");
     background-position: center;
     background-size: cover;
@@ -506,7 +506,6 @@ nav {
 
 .item3 {
     grid-area: 4 / 1 / 6 / 4;
-    background-color: rgb(46, 40, 156);
     border-radius: 1rem;
     background-image: url("../toogood/images/otherImages/section1/image-3.webp");
     background-position: center;
@@ -516,7 +515,6 @@ nav {
 
 .item4 {
     grid-area: 1 / 4 / 3 / 5;
-    background-color: rgb(174, 17, 153);
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
     background-image: url("../toogood/images/otherImages/section1/image-4.webp");
@@ -527,7 +525,6 @@ nav {
 
 .item5 {
     grid-area: 3 / 4 / 6 / 5;
-    background-color: rgb(208, 19, 19);
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
     background-image: url("../toogood/images/otherImages/section1/image-5.webp");
@@ -650,6 +647,7 @@ nav {
 
     .section-1-description {
         width: 100%;
+        
     }
 
     .section-1-grid {
@@ -672,7 +670,8 @@ nav {
     display: flex;
     flex-direction: column;
 }
-.logo-hover-container{
+
+.logo-hover-container {
     padding: 30px 0px;
 }
 
@@ -824,103 +823,6 @@ nav {
 /*  icon-image-section end section 4*/
 
 
-/*  menu Stying start here */
-.parent {
-    max-width: 1440px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    padding: 2rem;
-    background-image: url('https://i.pinimg.com/originals/2f/3c/dc/2f3cdc6a9b182457f81b4f72efd26ab3.jpg');
-    background-color: #212121;
-    background-repeat: no-repeat;
-    background-size: cover;
-    font-family: "Urbanist", sans-serif;
-    gap: 60px;
-    /* position: fixed; */
-
-}
-
-.forMenu {
-    padding: 2rem;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.forMenu h1 {
-    font-size: 40px;
-    font-family: 'Urbanist', sans-serif;
-}
-
-.forMenu>p:nth-of-type(1) {
-    font-size: 22px;
-    font-family: 'Urbanist', sans-serif;
-}
-
-.hr1 {
-    height: 5px;
-    background-color: #fff;
-    width: 40%;
-}
-
-.forMenu>p:nth-of-type(2) {
-    font-style: italic;
-    font-family: "Jost", sans-serif;
-    letter-spacing: .2rem;
-}
-
-.hr2 {
-    height: 5px;
-    background-color: #fff;
-    width: 40%;
-    margin-left: 57%;
-}
-
-.forMenuImages {
-    display: grid;
-    grid-template-columns: repeat(2, 230px);
-    grid-template-rows: repeat(2, 230px);
-    gap: 5px;
-    padding: 2rem;
-    justify-content: center;
-
-}
-
-/* styling for menu button button */
-.btn {
-    background-color: #121212;
-    padding: 14px 40px;
-    color: #fff;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    cursor: pointer;
-    border-radius: 10px;
-    border: 1px solid #fff;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
-        rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-    transition: 0.4s;
-}
-
-
-.btn span:last-child {
-    display: none;
-}
-
-.btn:hover {
-    transition: 0.4s;
-    border: 2px solid #fff;
-    background-color: #fff;
-    color: #121212;
-}
-
-.btn:active {
-    background-color: #87dbd0;
-}
-
-/*menu styling ends here*/
-
 /* event section starts here */
 
 .event-container {
@@ -929,193 +831,142 @@ nav {
     justify-content: center;
     flex-direction: column;
     background: #fff7f7;
-    max-width: 1440px;
+    max-width: 1340px;
     height: fit-content;
     margin: auto;
     padding: 3rem;
     width: 100%;
-  }
-  .event-container h1 {
-    text-align: start;
-    margin-bottom: 1rem;
-  }
-  .cards-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 4rem;
-  }
-  .card {
-    color: #323232;
-    background-color: #fff;
-    width: 230px;
-    height: 300px;
-    background: #fff;
-    border: 2px solid #323232;
-    box-shadow: 4px 4px #323232;
-    border-radius: 5px;
+}
+
+.event-header-text {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    padding: 20px;
-    gap: 10px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
-      sans-serif;
-  }
-
-  .card-img {
-    transition: all 0.5s;
-    display: flex;
     justify-content: center;
-  }
-
-  .card-img .img {
-    transform: scale(1);
-    box-sizing: border-box;
-    width: 130px;
-    height: 100px;
-    border-top-left-radius: 80px 50px;
-    border-top-right-radius: 80px 50px;
-    border: 2px solid black;
-  }
-
-  .card-title {
-    font-size: 20px;
-    font-weight: 500;
-    text-align: center;
-    color: #323232;
-  }
-
-  .card-subtitle {
-    font-size: 14px;
-    font-weight: 400;
-    color: #666;
-  }
-
-  .card-divider {
-    width: 100%;
-    border: 1px solid #323232;
-    border-radius: 50px;
-  }
-
-  .card-footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     align-items: center;
-  }
+    margin-bottom: 2rem;
+}
 
-  .card-btn {
-    height: 35px;
-    background: #fff;
-    border: 2px solid #323232;
-    border-radius: 5px;
-    padding: 0 15px;
-    transition: all 0.3s;
-  }
+.event-header-text h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #121212;
+    text-align: center;
+    font-family: 'Forum', cursive;
+    text-transform: uppercase;
+}
 
-  .card-img:hover {
-    transform: translateY(-3px);
-  }
+.event-header-text img {
+    width: 100px;
+    margin: 10px 0;
+}
 
-  .card-btn:hover {
-    border: 2px solid #2d8cf0;
-  }
+.event-header-text p {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #121212;
+    text-align: center;
+    font-family: 'DM Sans', sans-serif;
+}
 
-  .card-btn:active {
-    transform: translateY(3px);
-  }
 
-  @media (max-width: 895px) {
-    .card {
-      width: 170px;
-      height: 240px;
-    }
-    .card-img .img {
-      width: 80px;
-      height: 60px;
-      border-top-left-radius: 60px 30px;
-      border-top-right-radius: 60px 30px;
-    }
-    .card-title {
-      font-size: 16px;
-    }
+.event-card-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 30px 0px;
+    gap: 20px;
+}
 
-    .card-subtitle {
-      font-size: 12px;
-    }
+.event-card {
+    width: 280px;
+    height: 400px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    transition: all 0.3s ease;
+}
 
-    .card-btn {
-      height: 20px;
-      padding: 0 10px;
-    }
-  }
-  @media (max-width: 765px) {
-    .card {
-      width: 130px;
-      height: 200px;
-    }
-    .card-img .img {
-      width: 60px;
-      height: 40px;
-      border-top-left-radius: 40px 10px;
-      border-top-right-radius: 40px 10px;
-    }
-    .card-title {
-      font-size: 14px;
-    }
+.e1 {
+    background-image: linear-gradient(transparent, black), url(../toogood/images/otherImages/EventSection/event-1.webp);background-position: center;
+    background-size: cover;
+}
 
-    .card-subtitle {
-      font-size: 10px;
-    }
-    .card-btn {
-      font-size: 10px;
-    }
-  }
+.e2 {
+    background-image: linear-gradient(transparent, black), url(../toogood/images/otherImages/EventSection/event-2.webp);
+    background-position: center;
+    background-size: cover;
+}
 
-  @media (max-width: 650px) {
-    .cards-container {
-      flex-direction: column;
-      gap: 2rem;
-    }
-    .card {
-      width: 190px;
-      height: 290px;
-    }
-    .card-img .img {
-      width: 100px;
-      height: 80px;
-      border-top-left-radius: 80px 40px;
-      border-top-right-radius: 80px 40px;
-    }
-    .card-title {
-      font-size: 18px;
-    }
 
-    .card-subtitle {
-      font-size: 14px;
-    }
+.e3 {
+    background-image: linear-gradient(transparent, black), url(../toogood/images/otherImages/EventSection/event-3.webp);
+    background-position: center;
+    background-size: cover;
+}
 
-    .card-btn {
-      height: 25px;
-      padding: 0 15px;
-    }
-  }
+.e4 {
+    background-image: linear-gradient(transparent, black), url(../toogood/images/otherImages/EventSection/event-4.webp);
+    background-position: center;
+    background-size: cover;
+}
 
-  /* event section ends here */
+.event-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.event-card span {
+    background-color: #E4C590;
+    color: #121212;
+    padding: 2px 4px;
+    width: fit-content;
+    border-radius: 2px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    font-family: 600;
+}
+
+.event-card-text {
+    position: relative;
+    top: 14rem;
+}
+
+.event-card h2 {
+    right: 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+    font-family: 'Forum', cursive;
+    text-transform: uppercase;
+    margin: 1rem 0;
+}
+
+.event-card p {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #E4C590;
+    text-align: center;
+    font-family: 'DM Sans', sans-serif;
+}
+
+/* event section ends here */
 
 
 /* Pizza Section styling Here */
 
-.pizza {
-    background-color: #2d1b19;
-    height: fit-content;
-    display: flex;
-    flex-direction: column;
-    gap: 0px;
+
+.pizza-animation{
+    background-color: red;
     position: relative;
+    width: 1340px;
 }
+
 
 /* This styling for animation which is knife related, vertical line related, and rotation of pizza  */
 .verticalLine {
@@ -1134,7 +985,6 @@ nav {
     100% {
         height: 300px;
     }
-
     0% {
         height: 0px;
     }
@@ -1142,16 +992,17 @@ nav {
 
 .Knife {
     position: absolute;
-    left: 40px;
+    /* left: 40px; */
     top: 0px;
+    left: 40px;
     height: 100px;
     width: 100px;
     color: white;
 }
 
 .Knife img {
-    height: 100%;
-    width: 100%;
+    height: 70%;
+    width: 70%;
     animation: knifeCut 3s forwards;
     animation-timeline: view();
     animation-range-start: cover;
@@ -1171,7 +1022,14 @@ nav {
 .italic {
     position: absolute;
     right: 10px;
-    bottom: 10px;
+    top: 650px;
+    animation: round 3s forwards infinite;
+    transition: 3s;
+}
+
+.italic img {
+    height: 150px;
+    width: 150px;
     animation: round 3s forwards infinite;
     transition: 3s;
 }
@@ -1186,19 +1044,66 @@ nav {
 /* This Animation Styling ends here */
 
 /* This styling for first Grid */
-.pizzaGrid1 {
-    width: 900px;
+
+
+  
+
+.pizza-section {
     height: fit-content;
-    display: grid;
-    grid-template-columns: .8fr 1.2fr;
-    grid-template-rows: 450px;
-    gap: 20px;
-    padding: 2rem 2rem 0px;
-    background-color: rgb(50, 31, 31);
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0px; */
+    background-color: #121212;
+    /* position: relative; */
 }
 
-.pizzachild-1 {
-    background-color: #2d1b19;
+.pizza-section-container {
+    /* width: 1340px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 1rem;
+}
+
+.pizza-section-heading{
+    text-align: center;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+    
+}
+
+.pizza-section-heading h1{
+    margin: auto;
+    font-family: 'Forum', cursive;
+    color: #E4C590;
+    text-transform: uppercase;
+    font-size: clamp(1rem, 2vw, 4rem);
+}
+
+.pizza-section-heading p{
+    font-family: 'DM Sans', sans-serif;
+    color: #FFF;
+    font-size: clamp(12px, 2vw, 1rem);
+}
+.pizza-section-upper {
+    /* width: 70%; */
+    gap: 20px;
+    padding: 2rem 2rem 0rem 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.pizza-section-upper-1 {
+    width: 300px;
+    background: linear-gradient(230deg , #e0d79ceb, #C58E30);
     box-shadow: 2px 4px 6px black;
     border-radius: 10px;
     display: flex;
@@ -1207,26 +1112,26 @@ nav {
     gap: 20px;
 }
 
-.pizzaSliceImg1 {
+.pizza-section-upper-1 img {
     height: 60%;
     width: 70%;
     margin: auto;
 }
 
-.aboutPizza1 {
+.pizza-section-upper-1 h3 {
     color: white;
     font-size: 1.5em;
-    font-family: 'Urbanist', sans-serif;
+    font-family: 'DM Sans', serif;
 }
 
-.aboutPizzaDesc1 {
+.pizza-section-upper-1 span {
     color: white;
     font-size: .8em;
     font-weight: 700;
-    font-family: 'Josefin Slab', serif;
+    font-family: 'DM Sans', serif;
 }
 
-.pizzaBtn1 {
+.pizza-section-upper-1 button {
     background-color: rgba(128, 128, 128, 0.384);
     border-radius: 30px;
     padding: 1rem 1.5rem;
@@ -1237,71 +1142,73 @@ nav {
     font-family: 'Jost', sans-serif;
 }
 
-.pizzachild-2 {
-    background-color: #2d1b19;
+.pizza-section-upper-2 {
+    width: 450px;
+    background: linear-gradient(-140deg ,#e0d79ceb, #C58E30);
     box-shadow: 2px 4px 6px black;
     border-radius: 10px;
     overflow: hidden;
+    padding: 0px 20px;
 }
 
-.pizzaSliceImg2 {
+.pizza-section-upper-2 img {
     transform: rotate(180deg);
     height: 50%;
     margin-left: 105px;
 }
 
-.aboutPizza2 {
+.pizza-section-upper-2 h3 {
     color: white;
-    font-size: 1.7em;
-    margin: 30px;
-    font-family: 'Urbanist', sans-serif;
+    font-size: 1.5em;
+    font-family: 'DM Sans', serif;
+    margin-top: 35px;
 }
 
-.aboutPizzaDesc2 {
+.pizza-section-upper-2 span {
     color: white;
-    font-size: .9em;
-    margin: 10px 30px 10px;
+    font-size: .8em;
     font-weight: 700;
-    font-family: 'Josefin Slab', serif;
+    font-family: 'DM Sans', serif;
+    display: inline-block;
+    padding: 20px 0px;
 }
 
-.pizzaBtn2 {
+.pizza-section-upper-2 button {
     background-color: rgba(128, 128, 128, 0.384);
     border-radius: 30px;
     padding: 1rem 1.5rem;
     border: none;
     color: white;
     cursor: pointer;
-    width: 25%;
-    margin: 10px 30px 30px;
+    width: 45%;
     font-family: 'Jost', sans-serif;
 }
 
 /* First Grid Styling ends here */
 
 /* This styling for second Grid */
-.pizzaGrid2 {
-    width: 900px;
+.pizza-section-lower {
+    /* width: 70%; */
     height: fit-content;
-    display: grid;
-    grid-template-columns: 1.2fr .8fr;
-    grid-template-rows: 250px;
     gap: 20px;
-    padding: 20px 2rem 2rem;
-    background-color: rgb(50, 31, 31);
+    padding: 2rem 2rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
-.pizzachild-3 {
-    background-color: #2d1b19;
+.pizza-section-lower-1 {
+    width: 500px;
+    background: linear-gradient(-230deg , #e0d79ceb, #C58E30);
     box-shadow: 2px 4px 6px black;
     border-radius: 10px;
     overflow: hidden;
-    padding: .5rem;
     display: flex;
-    gap: 45px;
+    gap: 10px;
+    padding: 1rem 0px 1rem 1rem;
 }
 
-.pizzachild-3 div {
+.pizza-section-lower-1 div {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1309,24 +1216,24 @@ nav {
     color: white;
 }
 
-.pizzaSliceImg3 {
+.pizza-section-lower-1 img {
     width: 60%;
     height: 100%;
     margin-left: -80px;
 }
 
-.aboutPizza3 {
+.pizza-section-lower-1 h1 {
     font-size: 1.7em;
-    font-family: 'Urbanist', sans-serif;
+    font-family: 'DM Sans', serif;
 }
 
-.aboutPizzaDesc3 {
+.pizza-section-lower-1 p {
     font-size: .8em;
-    font-family: 'Josefin Slab', serif;
+    font-family: 'DM Sans', serif;
     font-weight: 700;
 }
 
-.pizzaBtn3 {
+.pizza-section-lower-1 button {
     background-color: rgba(128, 128, 128, 0.384);
     border-radius: 30px;
     padding: 1rem 1.5rem;
@@ -1334,11 +1241,12 @@ nav {
     color: white;
     cursor: pointer;
     width: 55%;
-    font-family: 'Jost', sans-serif;
+    font-family: 'DM Sans', serif;
 }
 
-.pizzachild-4 {
-    background-color: #2d1b19;
+.pizza-section-lower-2 {
+    width: 300px;
+    background: linear-gradient( 270deg, #e0d79ceb, #C58E30);
     box-shadow: 2px 4px 6px black;
     border-radius: 10px;
     display: flex;
@@ -1350,15 +1258,15 @@ nav {
     color: white;
 }
 
-.aboutPizza4 {
+.pizza-section-lower-2 h1 {
     font-size: 2.1rem;
     text-align: center;
-    line-height: 1em;
+    line-height: 42px;
     font-weight: 400;
-    font-family: 'Urbanist', sans-serif;
+    font-family: 'DM Sans', serif;
 }
 
-.pizzaBtn4 {
+.pizza-section-lower-2 button {
     background-color: rgba(128, 128, 128, 0.384);
     border-radius: 30px;
     padding: 1rem 1.5rem;
@@ -1366,7 +1274,7 @@ nav {
     color: white;
     cursor: pointer;
     width: 45%;
-    font-family: 'Jost', sans-serif;
+    font-family: 'DM Sans', serif;
 }
 
 
@@ -1404,13 +1312,74 @@ nav {
         width: 500px;
         grid-template-rows: 380px;
     }
-    .aboutPizza2{
+
+    .pizza-section-upper-2 {
+        display: none;
+    }
+
+    .pizza-section-lower-1{
+        display: none;
+    }
+
+
+    .aboutPizza2 {
         font-size: 1em;
         margin: 20px
     }
 
     .pizzaGrid2 {
         width: 500px;
+    }
+}
+
+/* Media query ends here */
+
+/* feedback page styling start by SHOUVICK */
+/* start of animation for feedback card section */
+@keyframes automove {
+    100% {
+        /* left: -170%; */
+        left: -2200px;
+    }
+}
+
+/* end of animation for feedback card section */
+@media (width<=768px) {
+    div.feedback_section>div.slider>div.list {
+        /* width: 850px; */
+        width: auto;
+    }
+
+    @keyframes automove {
+        100% {
+            /* left: -300%; */
+            left: -2100px;
+        }
+    }
+}
+
+@media (width<=480px) {
+    div.feedback_section>div.slider>div.list {
+        /* width: 450px; */
+        width: auto;
+
+    }
+
+    .pizza-section-lower-1{
+        display: none;
+    }
+
+    .pizza-section-lower{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    @keyframes automove {
+        100% {
+            /* left: -650%; */
+            left: -2000px;
+        }
     }
 }
 
@@ -1624,273 +1593,237 @@ nav {
 
 /* feedback page styling end BY SHOUVICK */
 
-/* footer section made by SHOUVICK (start) */
-/* footer section outer most div it is used for background color spred in whole page */
-div.footerpart_outerdiv {
-    background-color: #0f1630;
-    border: 1px solid;
-    width: 100vw;
+
+
+/* footer style */
+
+footer {
+    width: 100%;
     height: auto;
-    /* display: flex;
-    flex-direction: column;
-    flex-wrap: wrap; */
+    background-color: #121212;
+    padding-top: 50px;
+    font-family: 'DM Sans', sans-serif;
 }
 
-/* footer section inner div it hold all contain */
-div.footerpart_innerdiv {
-    width: 1440px;
-    height: auto;
+.footer-main {
+    width: 1340px;
     margin: auto;
-    margin-top: 50px;
     display: flex;
-    background-color: #0f1630;
     flex-direction: column;
-    /*     border: 1px solid white; */
-    /*     border: 1px solid red; */
-
 }
 
-div.contaier_forlogo_icons {
-    width: 1440px;
-    height: 80px;
-    margin-top: 30px;
-    border-top: 1px solid white;
-    border-bottom: 1px solid white;
+.footer-upper {
     display: flex;
-    /* flex-wrap: wrap; */
-    align-items: center;
     justify-content: space-between;
-}
-
-div.footer_icon>img {
-    height: 50px;
-}
-
-div.footer_socialmedia {
-    /*     border: 1px solid white; */
-    height: 60px;
-    display: flex;
-    padding-right: 20px;
-    gap: 20px;
-    justify-content: space-evenly;
-}
-
-div.footer_socialmedia>div {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
     align-items: center;
-    /* border: 1px solid white; */
-    background-color: white;
-    transition: background-color .5s;
+    flex-wrap: wrap;
+    padding: 10px 0;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
 }
 
-div.footer_socialmedia>div>img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-}
-
-
-/* it is the middle portion of footer that has four column */
-div.footer_content {
-    width: 1440px;
-    height: 300px;
-    /* border: 1px solid white; */
-    margin-top: 60px;
-    display: grid;
-    grid-template-columns: 500px 300px 300px 340px;
-    color: white;
-    font-family: 'Playfair Display', serif;
-
-
-}
-
-div.footer_content>div.footer_content_column {
-    /*     border: 1px solid white; */
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-
-}
-
-div.footer_content>div.footer_content_column span {
-    transition: transform 1s;
-
-}
-
-div.footer_content>div.footer_content_column span:hover {
-    transform: translateX(10px);
-    cursor: pointer;
-}
-
-
-div.footer_content_column>h1 {
-    font-size: 60px;
-}
-
-div.footer_content_column>div>form>input {
+.footer-logo img {
     width: 300px;
-    height: 40px;
-    background-color: #0f1630;
-    padding-left: 20px;
-    color: white;
-    border-radius: 10px;
-    border: 1px solid white;
-
 }
 
-div.footer_content_column>div>form>button {
-    height: 40px;
-    background-color: #ec3c3c;
-    color: white;
-    padding: 10px;
-    border-radius: 10px;
-}
-
-div.footer_content_column>div>form>button:hover {
-    cursor: pointer;
-    background-color: #e70d0d;
-}
-
-div.footer_content_column>div>form>input::placeholder {
-    color: white;
-
-    margin: 0px;
-}
-
-div#forth_column>div {
+.footer-social {
     display: flex;
-    /*     border: 1px solid; */
-    align-items: center;
     gap: 20px;
 }
 
-.footer_hover_effect:hover {
-    cursor: pointer;
-}
-
-/* div footer last section that holds t&c and some other thing */
-div.footer_last_div {
-    /*     border-top: 1px solid white; */
-    width: 1440px;
-    height: 60px;
+.footer-mid {
+    color: #fff;
     display: flex;
-    align-items: center;
-    color: white;
-    border-top: 1px solid white;
-    padding: 0px 10px 0px 10px;
     justify-content: space-between;
+    border-bottom: 1px solid #fff;
+    padding: 30px;
 }
 
-div.footer_last_div>div {
-    width: auto;
-    height: 40px;
+.footer-mid-1 {
     display: flex;
-    gap: 20px;
-    padding-right: 20px;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-mid-1 h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.footer-mid-1,
+.f2,
+.f3 span {
+    font-size: 16px;
+    line-height: 20px;
+    cursor: pointer;
+}
+
+.footer-mid-1 form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-mid-1 form input {
+    width: 100%;
+    height: 40px;
+    background-color: #FFF;
+    padding-left: 20px;
+    color: #121212;
+    border-radius: 5px;
+    outline: none;
+}
+
+.footer-mid-1 form button {
+    width: 100%;
+    height: 40px;
+    background-color: #E4C590;
+    color: #121212;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1.8px;
+}
+
+.icon-text {
+    display: flex;
+    gap: 10px;
     align-items: center;
 }
 
-@media (width<=1200px) {
-    div.footerpart_outerdiv {
-        border: none;
-        background-color: white;
-    }
-
+.footer-end {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    color: #fff;
+    padding: 20px;
 }
 
-@media (width<=768px) {
+.footer-end div:nth-of-type(2) {
+    display: flex;
+    gap: 20px;
+}
 
-    div.footerpart_innerdiv {
-        height: 800px;
-        /* need to adjust */
-        padding: 20px;
+
+@media screen and (max-width: 912px) {
+    .footer-main {
+        width: 100%;
     }
 
-    div.contaier_forlogo_icons {
-
-        justify-content: baseline;
+    .footer-upper {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 0;
     }
 
-    div.footer_socialmedia {
-        margin-right: 400px;
+    .footer-mid {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
     }
 
-    div.footer_content {
-        grid-template-columns: repeat(2, 1fr);
+    .footer-mid-1 {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .f2,
+    .f3 {
+        display: none;
+    }
+
+    .footer-end {
+        justify-content: center;
+        flex-direction: column;
         gap: 20px;
     }
 
-    div.footer_last_div {
-        justify-content: baseline;
-        margin-top: 220px;
-        padding: 0px;
-    }
-
-    div.footer_last_div>div:nth-child(2) {
-        margin-right: 360px;
-    }
 }
 
-@media (width<=480px) {
-    div.footerpart_innerdiv {
-        height: 500px;
-        /* need to adjust */
-        padding: 20px;
+
+@media screen and (max-width: 768px) {
+    .footer-main {
+        width: 100%;
     }
 
-    div.contaier_forlogo_icons {
+    .footer-upper {
         flex-direction: column;
-        height: 160px;
-        border-top: 0px;
-    }
-
-    div.footer_socialmedia {
-        margin-right: 0px;
-    }
-
-    div.footer_socialmedia {
-        margin-bottom: 10px;
-    }
-
-    div.footer_content {
-        grid-template-columns: repeat(1, 1fr);
-    }
-
-    div.footer_content>div.footer_content_column {
+        gap: 20px;
         align-items: center;
-
+        justify-content: center;
+        padding: 10px 0;
     }
 
-    div.footer_content>div.footer_content_column:nth-of-type(2) {
+    .footer-mid {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .footer-mid-1 {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .f2,
+    .f3 {
         display: none;
     }
 
-    div.footer_content>div.footer_content_column:nth-of-type(3) {
-        display: none;
+    .footer-end {
+        justify-content: center;
     }
 
-    div.footer_content>div.footer_content_column:nth-of-type(4) {
-        display: none;
-    }
-
-    div.footer_last_div {
-
-        margin-top: 20px;
-
-    }
-
-    div.footer_last_div>div:nth-child(2) {
+    .footer-end div:nth-of-type(2) {
         display: none;
     }
 
 
 }
 
-/* footer page styling end BY SHOUVICK */
+@media screen and (max-width: 480px) {
+    .footer-main {
+        width: 100%;
+    }
 
+    .footer-upper {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 0;
+    }
 
+    .footer-mid {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+    }
 
+    .footer-mid-1 {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .f2,
+    .f3 {
+        display: none;
+    }
+
+    .footer-end {
+        justify-content: center;
+    }
+
+    .footer-end div:nth-of-type(2) {
+        display: none;
+    }
+
+}
