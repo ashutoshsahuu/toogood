@@ -16,6 +16,11 @@
 /* font-family: "Jost", sans-serif; */
 
 
+html {
+    scroll-behavior: smooth;
+    scroll-snap-align: start;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -23,29 +28,29 @@
 }
 
 .container {
-    max-width: 1440px;
+    max-width: 1340px;
     margin: auto;
 }
 
 /* width */
 ::-webkit-scrollbar {
     width: 10px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: #121212; 
-  }
-   
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: #E4C590; 
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #555; 
-  }
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #121212;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #E4C590;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
 
 
 
@@ -64,6 +69,7 @@ header {
 }
 
 nav {
+    border-bottom: 1px solid #aaaaaa43;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -92,14 +98,16 @@ nav {
 @keyframes navColor {
     0% {
         background-color: transparent;
+        border-bottom: 1px solid transparent;
+
     }
 
     20% {
-        background-color: #121212;
+        background-color: #161718;
     }
 
     100% {
-        background-color: #121212;
+        background-color: #161718;
     }
 }
 
@@ -256,6 +264,11 @@ nav {
     text-transform: uppercase;
 }
 
+.btn2 {
+    display: none;
+ }
+
+
 .main-text button:hover {
     background-color: #E4C590;
     color: #121212;
@@ -312,6 +325,10 @@ nav {
         height: 30px;
         margin: 20px 0px;
     }
+    .btn2 {
+       display: inline-block;
+       margin-top: 30px;
+    }
 
 }
 
@@ -331,15 +348,22 @@ nav {
 }
 
 .carousal-text {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .carousal-text h2 {
     font-family: 'Forum', cursive;
     font-size: clamp(1.2rem, 3vw, 3rem);
-    color: #DBB26B;
+    color: #eab65c;
 }
-
+.carousal-text img{
+    width: 100px;
+    height: 30px;
+    margin: 10px 0px;
+}
 .carousal-text span {
     font-size: clamp(0.8rem, 3vw, 1.2rem);
     font-weight: 400;
@@ -422,7 +446,7 @@ nav {
 
 .section-1-container {
     display: flex;
-    width: 1440px;
+    width: 1340px;
     height: 100%;
     margin: auto;
     justify-content: space-evenly;
@@ -666,7 +690,7 @@ nav {
 
     .section-1-description {
         width: 100%;
-        
+
     }
 
     .section-1-grid {
@@ -685,7 +709,7 @@ nav {
 /*  icon-image-section start section 4 */
 
 .icon-image-section {
-    background-color: #121212;
+    background-color: #161718;
     display: flex;
     flex-direction: column;
 }
@@ -700,24 +724,44 @@ nav {
     font-family: 'Forum', cursive;
     font-weight: 700;
     letter-spacing: 1px;
-    padding-top: 50px;
-    text-decoration: underline;
     text-align: center;
+}
+
+.logo-hover-container-detail{
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-hover-container-detail img{
+    width: 100px;
+    height: 30px;
+    margin: 10px 0;
+}
+
+.logo-hover-container-detail p{
+    font-size: clamp(0.8rem, 3vw, 12px);
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
+    font-family: 'DM Sans', sans-serif;
 }
 
 .icon-image-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 60px 0;
-    background-color: #121212;
+    padding: 80px 20px;
+    background-color: #161718;
     /* height: fit-content; */
     flex-wrap: wrap;
 }
 
 .icon-box {
     position: relative;
-    width: 350px;
+    width: 300px;
     height: 190px;
 }
 
@@ -740,6 +784,7 @@ nav {
     left: 50%;
     display: none;
     transform: translate(-50%, -50%) rotate(20deg);
+    transition: display 0.5s ease-in-out;
 }
 
 /* Show the second image and hide the first image on hover */
@@ -825,7 +870,7 @@ nav {
 @media screen and (max-width: 480px) {
     .icon-box {
         position: relative;
-        width: 180px;
+        width: 150px;
         height: 120px;
     }
 
@@ -910,7 +955,8 @@ nav {
 }
 
 .e1 {
-    background-image: linear-gradient(transparent, black), url(../toogood/images/otherImages/EventSection/event-1.webp);background-position: center;
+    background-image: linear-gradient(transparent, black), url(../toogood/images/otherImages/EventSection/event-1.webp);
+    background-position: center;
     background-size: cover;
 }
 
@@ -976,11 +1022,137 @@ nav {
 
 /* event section ends here */
 
+/* about us start  */
+
+.about-container {
+    font-family: "DM Sans", sans-serif;
+    height: fit-content;
+    color: #fff;
+    background-color: #161718;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* max-width: 1340px; */
+    margin: auto;
+    padding: 4rem 0;
+}
+
+.separator {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    margin-top: 20px;
+    text-align: center;
+    font-family: "Forum", serif;
+    font-size: 2.4rem;
+    margin-bottom: 20px;
+}
+
+.about {
+    margin: auto;
+    height: fit-content;
+    padding: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #E4C590;
+}
+
+.about-text{
+    width: 70%;
+    margin: auto;
+}
+
+.text {
+    color: #aaa;
+    margin: auto;
+    text-align: center;
+    height: fit-content;
+    display: block;
+    padding: 0 3rem;
+    width: 100%;
+}
+
+.card-container {
+    margin-top: 30px;
+    height: fit-content;
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.card {
+    background-color: #121212;
+    width: 250px;
+    height: fit-content;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card img {
+    width: 90px;
+}
+
+.card h1 {
+    margin-top: 10px;
+    font-family: "Forum", serif;
+    font-size: 18px;
+    text-align: center;
+}
+
+.card p {
+    margin-top: 10px;
+    font-size: 13px;
+    text-align: center;
+    color: #aaa;
+}
+
+@media screen and (max-width: 768px) {
+    .about-text {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .card-container {
+        gap: 1rem;
+    }
+
+    .card {
+        width: 200px;
+    }
+
+    .card h1 {
+        font-size: 16px;
+    }
+
+    .card p {
+        font-size: 12px;
+    }
+    
+}
+/* about us end */
+
+
+
 
 /* Pizza Section styling Here */
 
-
-.pizza-animation{
+.pizza-animation {
     background-color: red;
     position: relative;
     width: 1340px;
@@ -1004,6 +1176,7 @@ nav {
     100% {
         height: 300px;
     }
+
     0% {
         height: 0px;
     }
@@ -1065,7 +1238,7 @@ nav {
 /* This styling for first Grid */
 
 
-  
+
 
 .pizza-section {
     height: fit-content;
@@ -1074,7 +1247,7 @@ nav {
     justify-content: center;
     align-items: center;
     gap: 0px; */
-    background-color: #121212;
+    background-color: #161718;
     /* position: relative; */
 }
 
@@ -1087,7 +1260,7 @@ nav {
     padding: 0px 1rem;
 }
 
-.pizza-section-heading{
+.pizza-section-heading {
     text-align: center;
     margin-top: 50px;
     display: flex;
@@ -1096,10 +1269,10 @@ nav {
     align-items: center;
     width: 100%;
     gap: 20px;
-    
+
 }
 
-.pizza-section-heading h1{
+.pizza-section-heading h1 {
     margin: auto;
     font-family: 'Forum', cursive;
     color: #E4C590;
@@ -1107,11 +1280,12 @@ nav {
     font-size: clamp(1rem, 2vw, 4rem);
 }
 
-.pizza-section-heading p{
+.pizza-section-heading p {
     font-family: 'DM Sans', sans-serif;
     color: #FFF;
     font-size: clamp(12px, 2vw, 1rem);
 }
+
 .pizza-section-upper {
     /* width: 70%; */
     gap: 20px;
@@ -1122,7 +1296,7 @@ nav {
 
 .pizza-section-upper-1 {
     width: 300px;
-    background: linear-gradient(230deg , #e0d79ceb, #C58E30);
+    background: linear-gradient(230deg, #e0d79ceb, #C58E30);
     box-shadow: 2px 4px 6px black;
     border-radius: 10px;
     display: flex;
@@ -1151,19 +1325,26 @@ nav {
 }
 
 .pizza-section-upper-1 button {
-    background-color: rgba(128, 128, 128, 0.384);
-    border-radius: 30px;
+    background-color: #1617187a;
+    border-radius: 4px;
     padding: 1rem 1.5rem;
     border: none;
     color: white;
     cursor: pointer;
     width: 45%;
-    font-family: 'Jost', sans-serif;
+    font-family: 'DM Sans', serif;
+    transition: background-color 0.5s;
 }
+
+.pizza-section-upper-1 button:hover {
+    background-color: #16171860;
+}
+
+
 
 .pizza-section-upper-2 {
     width: 450px;
-    background: linear-gradient(-140deg ,#e0d79ceb, #C58E30);
+    background: linear-gradient(-140deg, #e0d79ceb, #C58E30);
     box-shadow: 2px 4px 6px black;
     border-radius: 10px;
     overflow: hidden;
@@ -1193,14 +1374,19 @@ nav {
 }
 
 .pizza-section-upper-2 button {
-    background-color: rgba(128, 128, 128, 0.384);
-    border-radius: 30px;
+    background-color: #1617187a;
+    border-radius: 4px;
     padding: 1rem 1.5rem;
     border: none;
     color: white;
     cursor: pointer;
     width: 45%;
-    font-family: 'Jost', sans-serif;
+    font-family: 'DM Sans', serif;
+    transition: background-color 0.5s;
+}
+
+.pizza-section-upper-2 button:hover {
+    background-color: #16171860;
 }
 
 /* First Grid Styling ends here */
@@ -1218,7 +1404,7 @@ nav {
 
 .pizza-section-lower-1 {
     width: 500px;
-    background: linear-gradient(-230deg , #e0d79ceb, #C58E30);
+    background: linear-gradient(-230deg, #e0d79ceb, #C58E30);
     box-shadow: 2px 4px 6px black;
     border-radius: 10px;
     overflow: hidden;
@@ -1253,19 +1439,25 @@ nav {
 }
 
 .pizza-section-lower-1 button {
-    background-color: rgba(128, 128, 128, 0.384);
-    border-radius: 30px;
+    background-color: #1617187a;
+    border-radius: 4px;
     padding: 1rem 1.5rem;
     border: none;
     color: white;
     cursor: pointer;
-    width: 55%;
-    font-family: 'DM Sans', serif;
+    width: 45%;
+    font-family: 'Jost', sans-serif;
+    transition: background-color 0.5s;
 }
+
+.pizza-section-lower-1 button:hover {
+    background-color: #16171860;
+}
+
 
 .pizza-section-lower-2 {
     width: 300px;
-    background: linear-gradient( 270deg, #e0d79ceb, #C58E30);
+    background: linear-gradient(270deg, #e0d79ceb, #C58E30);
     box-shadow: 2px 4px 6px black;
     border-radius: 10px;
     display: flex;
@@ -1286,14 +1478,19 @@ nav {
 }
 
 .pizza-section-lower-2 button {
-    background-color: rgba(128, 128, 128, 0.384);
-    border-radius: 30px;
+    background-color: #1617187a;
+    border-radius: 4px;
     padding: 1rem 1.5rem;
     border: none;
     color: white;
     cursor: pointer;
     width: 45%;
-    font-family: 'DM Sans', serif;
+    font-family: 'Jost', sans-serif;
+    transition: background-color 0.5s;
+}
+
+.pizza-section-lower-2 button:hover {
+    background-color: #16171860;
 }
 
 
@@ -1336,7 +1533,7 @@ nav {
         display: none;
     }
 
-    .pizza-section-lower-1{
+    .pizza-section-lower-1 {
         display: none;
     }
 
@@ -1364,10 +1561,11 @@ nav {
     justify-content: center;
     align-items: center;
     gap: 30px;
+    padding: 50px 0px;
 }
 
 
-.feedback-heading{
+.feedback-heading {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -1380,7 +1578,7 @@ nav {
     font-family: "Forum", cursive;
     font-size: clamp(1rem, 3vw, 4rem);
     font-weight: 200;
-    color: #e87171;
+    color: #CD5334;
 }
 
 .feedback-heading>h2 {
@@ -1390,7 +1588,7 @@ nav {
     text-align: center;
 }
 
-.feedback-heading img{
+.feedback-heading img {
     width: 100px;
 }
 
@@ -1420,43 +1618,43 @@ nav {
     gap: 10px;
 }
 
-.review_section-upper{
+.review_section-upper {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-.review_section-upper img{
+.review_section-upper img {
     width: 40px;
     height: 40px;
 }
 
-.review_section-upper p{
+.review_section-upper p {
     font-size: clamp(0.8rem, 3vw, 1rem);
     font-weight: 500;
     color: #121212;
 
 }
 
-.review_section-lower{
+.review_section-lower {
     display: flex;
     gap: 20px;
 }
 
-.review_section-lower-1 img{
+.review_section-lower-1 img {
     width: 70px;
     height: 70px;
     border-radius: 50%;
 }
 
-.review_section-lower-2{
+.review_section-lower-2 {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-.review_section-lower-2 h3{
+.review_section-lower-2 h3 {
     font-size: clamp(0.8rem, 3vw, 1.2rem);
     font-weight: 600;
     color: #121212;
@@ -1464,7 +1662,7 @@ nav {
 
 
 .review_card:hover {
-    transform: translateY(-10px);   
+    transform: translateY(-10px);
     cursor: pointer;
 }
 
@@ -1473,17 +1671,17 @@ nav {
         width: 45%;
     }
 
-    .review_card-container{
+    .review_card-container {
         display: flex;
         flex-direction: column;
         gap: 20px;
 
     }
 
-    .review_card{
+    .review_card {
         width: 300px;
     }
-    
+
 }
 
 
@@ -1492,14 +1690,15 @@ nav {
         width: 45%;
     }
 
-    .review_card-container{
+    .review_card-container {
+        width: 100%;
         display: flex;
         flex-direction: column;
         gap: 20px;
 
     }
 
-    .review_card{
+    .review_card {
         width: 300px;
     }
 }
@@ -1508,17 +1707,14 @@ nav {
 /* feedback section ends here */
 
 
-/* feedback page styling end BY SHOUVICK */
-
-
 
 /* footer style */
 
 footer {
     width: 100%;
     height: auto;
-    background-color: #121212;
-    padding-top: 50px;
+    background-color: #161718;
+    padding-top: 80px;
     font-family: 'DM Sans', sans-serif;
 }
 
@@ -1535,8 +1731,7 @@ footer {
     align-items: center;
     flex-wrap: wrap;
     padding: 10px 0;
-    border-top: 1px solid #fff;
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid #ffffff4b;
 }
 
 .footer-logo img {
@@ -1552,7 +1747,7 @@ footer {
     color: #ffffff59;
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid #ffffff4b;
     padding: 30px;
 }
 
@@ -1565,6 +1760,8 @@ footer {
 .footer-mid-1 h2 {
     font-size: 30px;
     margin-bottom: 10px;
+    color: #e4c590b8;
+    line-height: 32px;
 }
 
 .footer-mid-1,
@@ -1584,7 +1781,7 @@ footer {
 .footer-mid-1 form input {
     width: 100%;
     height: 40px;
-    background-color: #ffffffb6;
+    background-color: #ffffffd5;
     padding-left: 20px;
     color: #121212;
     border-radius: 5px;
@@ -1665,13 +1862,17 @@ footer {
 
 
 @media screen and (max-width: 768px) {
+
+    .footer-logo img{
+        width: 150px;
+    }
     .footer-main {
         width: 100%;
     }
 
     .footer-upper {
         flex-direction: column;
-        gap: 20px;
+        gap: 30px;
         align-items: center;
         justify-content: center;
         padding: 10px 0;

@@ -25,21 +25,23 @@
 
 <body>
   <!-- front page start-->
-  <div class="main-section">
+  <div class="main-section" id="home">
     <header>
       <nav>
         <div class="container nav-container">
-          <div class="nav-logo">
-            <img src="./images/logo/Logo maker project (2) (1).svg" alt="">
-          </div>
+          <a href="./index.html">
+            <div class="nav-logo">
+              <img src="./images/logo/Logo maker project (2) (1).svg" alt="">
+            </div>
+          </a>
           <div class="nav-links">
-            <a href="#home">Home</a>
-            <a href="#home">About</a>
-            <a href="#home">Culinary delight</a>
-            <a href="#home">Our Stories</a>
+            <a href="./index.html">Home</a>
+            <a href="#about">About</a>
+            <a href="./menu.html">Culinary delight</a>
+            <a href="./social.html">Our Stories</a>
           </div>
           <div class="nav-btn">
-            <a href="#home">Book a Table</a>
+            <a href="./booking.html">Book a Table</a>
           </div>
           <div class="menu-btn">
             <i class="fas fa-bars"></i>
@@ -56,7 +58,12 @@
           We Only <span>Serve</span> what we are really <span>good</span> at
         </h2>
         <p>Experience the best flavors crafted with love and passion.</p>
-        <button>View our menu</button>
+        <a href="./menu.html">
+          <button>View our menu</button>
+        </a>
+        <a href="./booking.html">
+          <button class="btn2"> Book A Table</button>
+        </a>
       </div>
     </main>
   </div>
@@ -68,6 +75,7 @@
     <div class="container carousal-section">
       <div class="carousal-text">
         <h2>Our Specialities</h2>
+        <img src="./images/svgImage/separator (1).svg" alt="">
         <span>Discover a fusion of traditional and modern culinary delights.</span>
       </div>
       <div class="owl-carousel carousal-image">
@@ -120,7 +128,9 @@
           <h3>Delicious Pizza</h3>
           <span>Fast Food is a popular category they a
             emphasizes quick a service designer here us</span>
-          <button>Shop Now</button>
+          <a href="./menu.html">
+            <button>Shop Now</button>
+          </a>
         </div>
 
         <div class=" pizza-section-upper-2">
@@ -128,7 +138,9 @@
           <h3>Dinner</h3>
           <span>Fast Food is a popular category they a emphasizes
             quick a service designer here us</span>
-          <button>Shop Now</button>
+          <a href="./menu.html">
+            <button>Shop Now</button>
+          </a>
         </div>
 
       </div>
@@ -140,7 +152,9 @@
             <h1>Best Burger</h1>
             <p>Fast Food is a popular category they a
               emphasizes quick a service designer here </p>
-            <button class="pizzaBtn3">Shop Now</button>
+            <a href="./menu.html">
+              <button>Shop Now</button>
+            </a>
           </div>
         </div>
         <div class=" pizza-section-lower-2">
@@ -229,8 +243,11 @@
 
   <section class="icon-image-section">
     <div class="logo-hover-container container">
-      <div>
+      <div class="logo-hover-container-detail">
         <h2>In Accociation With</h2>
+        <img src="./images/svgImage/separator (1).svg" alt="">
+        <p>Our associate partner brings you different flavours all together from diifrent region indulge in that
+          flaovours.</p>
       </div>
       <div class="icon-image-container">
         <div class="icon-box box1">
@@ -319,6 +336,50 @@
   </section>
 
   <!-- Events section ends here -->
+
+  <!-- about section starts -->
+
+  <section class="about-container" id="about">
+    <div class="about">why choose us</div>
+    <div class="separator">
+      <img src="./images/svgImage/separator (1).svg" alt="separator" width="100">
+    </div>
+    <h1 class="title">Our Strength</h1>
+    <div class="about-text">
+      <span class="text">Our café's strength lies in our warm, welcoming atmosphere and commitment to quality. We use
+        locally-sourced ingredients for our menu and our skilled baristas craft a diverse range of expertly brewed
+        beverages. With friendly staff and cozy seating, our café offers an exceptional experience for relaxation and
+        socializing.</span>
+    </div>
+    <div class="card-container">
+      <div class="card card-1">
+        <div class="card-img"><img src="./images/about/features-icon-1.png" alt="feature1" /></div>
+        <h1>Hygienic Food</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      </div>
+      <div class="card card-2">
+        <div class="card-img"><img src="./images/about/features-icon-2.png" alt="feature1" /></div>
+        <h1>Fresh Environment</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      </div>
+      <div class="card card-3">
+        <div class="card-img"><img src="./images/about/features-icon-3.png" alt="feature1" /></div>
+        <h1>Skilled Chefs</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      </div>
+      <div class="card card-4">
+        <div class="card-img"><img src="./images/about/features-icon-4.png" alt="feature1" /></div>
+        <h1>Event & Party</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+  <!-- about section ends -->
 
 
   <!-- feedback section start which contain some text and one sliding animation div (start)-->
@@ -453,7 +514,7 @@
           <div>
             <form action="#">
               <input type="email" placeholder="Email Adress" />
-              <button type="submit">submit</button>
+              <button disabled type="submit">submit</button>
             </form>
           </div>
         </div>
