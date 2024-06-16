@@ -204,32 +204,27 @@ nav {
 }
 
 
-
-
-
-
-
 main {
     background-color: #161718;
-    padding: 100px 40px;
+    padding: 100px 10px;
+    width: 100%;
     background-image: url("../toogood/images/menuImages/bg-menu.webp");
 }
 
 div.outerbox {
     color: white;
     margin: auto;
-    width: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.096);
+    width: 90%;
+    margin: auto;
     display: flex;
-    text-align: center;
-    border: 1px solid white;
-    
+    text-align: center;    
 }
 
 div.innerboxleft {
     width: 70%;
     padding: 75px 60px 0px 60px;
     background-color: #161718;
-    border: 1px solid white;
 }
 
 div.innerboxleft>h1 {
@@ -250,7 +245,6 @@ div.innerboxleft span {
 }
 
 div#first_input_section {
-    /* border: 1px solid white; */
     display: flex;
     gap: 16px;
     margin-bottom: 20px;
@@ -406,8 +400,8 @@ div.innerboxright>p:nth-of-type(10) {
 @media(width<=480px) {
     div#first_input_section {
         flex-direction: column;
-
     }
+
     div.innerboxleft {
         width: 100%;
         padding: 15px;

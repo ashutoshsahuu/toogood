@@ -19,6 +19,7 @@
 html {
     scroll-behavior: smooth;
     scroll-snap-align: start;
+    /* color-scheme: light dark; */
 }
 
 * {
@@ -51,6 +52,22 @@ html {
 ::-webkit-scrollbar-thumb:hover {
     background: #555;
 }
+
+.to-top img {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.to-top img:hover {
+    background-color: #E4C590;
+}
+
 
 
 
@@ -205,9 +222,12 @@ nav {
 
 }
 
+
+
 .main-text {
     text-align: center;
-    width: 50%;
+    width: 55%;
+    animation: fadeup 1s forwards;
 }
 
 .main-text h2 {
@@ -236,11 +256,6 @@ nav {
 }
 
 
-.main-text span:nth-of-type(2) {
-    font-family: "Josefin Slab", serif;
-    font-style: italic;
-}
-
 .main-text p:nth-of-type(2) {
     font-size: clamp(10px, 3vw, 16px);
     font-weight: 400;
@@ -266,10 +281,11 @@ nav {
 
 .btn2 {
     display: none;
- }
+}
+
 .btn3 {
     display: none;
- }
+}
 
 
 .main-text button:hover {
@@ -296,6 +312,7 @@ nav {
         height: 30px;
         margin: 20px 0px;
     }
+
 
 }
 
@@ -328,17 +345,38 @@ nav {
         height: 30px;
         margin: 20px 0px;
     }
-    .btn2 {
-       display: inline-block;
-       margin: 30px 0px;
 
+    .btn2 {
+        display: inline-block;
+        margin: 30px 0px;
     }
 
     .btn3 {
-       display: inline-block;
+        display: inline-block;
+    }
+
+    .to-top img {
+        display: none;
     }
 
 }
+
+
+@keyframes fadeup {
+    from {
+        transform: translateY(200px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+
+}
+
+
+
 
 
 /* first page ends */
@@ -365,13 +403,15 @@ nav {
 .carousal-text h2 {
     font-family: 'Forum', cursive;
     font-size: clamp(1.2rem, 3vw, 3rem);
-    color: #eab65c;
+    color: #ebab3c;
 }
-.carousal-text img{
+
+.carousal-text img {
     width: 100px;
     height: 30px;
     margin: 10px 0px;
 }
+
 .carousal-text span {
     font-size: clamp(0.8rem, 3vw, 1.2rem);
     font-weight: 400;
@@ -459,6 +499,7 @@ nav {
     margin: auto;
     justify-content: space-evenly;
     font-family: 'Forum', cursive;
+    padding: 20px;
 }
 
 .section-1-description {
@@ -693,7 +734,7 @@ nav {
     }
 
     .grid-container {
-        gap: 5px;
+        gap: 10px;
     }
 
     .section-1-description {
@@ -727,7 +768,7 @@ nav {
 }
 
 .icon-image-section h2 {
-    color: #E4C590;
+    color: #f0be67;
     font-size: clamp(1rem, 5vw, 3rem);
     font-family: 'Forum', cursive;
     font-weight: 700;
@@ -735,21 +776,21 @@ nav {
     text-align: center;
 }
 
-.logo-hover-container-detail{
-    padding-top: 50px;
+.logo-hover-container-detail {
+    padding: 50px 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.logo-hover-container-detail img{
+.logo-hover-container-detail img {
     width: 100px;
     height: 30px;
     margin: 10px 0;
 }
 
-.logo-hover-container-detail p{
+.logo-hover-container-detail p {
     font-size: clamp(0.8rem, 3vw, 12px);
     font-weight: 400;
     color: #fff;
@@ -903,6 +944,7 @@ nav {
     justify-content: center;
     flex-direction: column;
     background: #fff7f7;
+    /* background-color: light-dark(#fff7f7 , #161718); */
     max-width: 1340px;
     height: fit-content;
     margin: auto;
@@ -1071,20 +1113,37 @@ nav {
     color: #E4C590;
 }
 
-.about-text{
-    width: 70%;
-    margin: auto;
-}
-
-.text {
-    color: #aaa;
+.about-text {
+    width: 60%;
     margin: auto;
     text-align: center;
-    height: fit-content;
-    display: block;
-    padding: 0 3rem;
-    width: 100%;
+    font-family: "DM Sans", sans-serif;
+    padding: 20px;
 }
+
+.about-container .text {
+    width: 100%;
+    /* padding: 20px; */
+    color: hsla(0, 0%, 100%, 0.2);
+    background-image: linear-gradient(90deg, white, white);
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    background-clip: text;
+    animation: reveal linear forwards;
+    animation-timeline: view();
+    animation-range-start: cover 19vh;
+    animation-range-end: contain 50vh;
+
+}
+
+@keyframes reveal {
+
+    to {
+        background-size: 100% 100%;
+    }
+}
+
+
 
 .card-container {
     margin-top: 30px;
@@ -1151,8 +1210,9 @@ nav {
     .card p {
         font-size: 12px;
     }
-    
+
 }
+
 /* about us end */
 
 
@@ -1871,9 +1931,10 @@ footer {
 
 @media screen and (max-width: 768px) {
 
-    .footer-logo img{
+    .footer-logo img {
         width: 150px;
     }
+
     .footer-main {
         width: 100%;
     }
