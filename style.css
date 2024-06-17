@@ -70,7 +70,6 @@ html {
 
 
 
-
 /* first page starts */
 .main-section {
     background-image: url('./images/otherImages/HeroSection/img3.jpg');
@@ -277,6 +276,7 @@ nav {
     font-size: clamp(8px, 3vw, 12px);
     letter-spacing: 3px;
     text-transform: uppercase;
+    cursor: pointer;
 }
 
 .btn2 {
@@ -307,11 +307,11 @@ nav {
     .menu-btn {
         display: block;
     }
-
+    
     .nav-links {
         display: none;
     }
-
+    
     .nav-btn {
         display: none;
     }
@@ -324,13 +324,13 @@ nav {
     .nav-links {
         display: none;
     }
-
+    
 }
 
 
 
 @media screen and (max-width : 426px) {
-
+    
     .nav-logo img {
         width: 150px;
     }
@@ -342,30 +342,32 @@ nav {
     .menu-btn {
         display: block;
     }
-
+    
     .nav-links {
         display: none;
     }
-
+    
     .nav-btn {
         display: none;
     }
-
+    
     .main-text>span>img {
         width: 100px;
         height: 30px;
         margin: 20px 0px;
     }
-
+    
     .btn2 {
         display: inline-block;
         margin: 30px 0px;
+        cursor: pointer;
     }
-
+    
     .btn3 {
         display: inline-block;
+        cursor: pointer;
     }
-
+    
     .to-top img {
         display: none;
     }
