@@ -1018,26 +1018,26 @@ nav {
 }
 
 .e1 {
-    background-image: linear-gradient(transparent, black), url(../toogood/images/otherImages/EventSection/event-1.webp);
+    background-image: linear-gradient(transparent, black), url(./images/otherImages/EventSection/event-1.webp);
     background-position: center;
     background-size: cover;
 }
 
 .e2 {
-    background-image: linear-gradient(transparent, black), url(../toogood/images/otherImages/EventSection/event-2.webp);
+    background-image: linear-gradient(transparent, black), url(./images/otherImages/EventSection/event-2.webp);
     background-position: center;
     background-size: cover;
 }
 
 
 .e3 {
-    background-image: linear-gradient(transparent, black), url(../toogood/images/otherImages/EventSection/event-3.webp);
+    background-image: linear-gradient(transparent, black), url(./images/otherImages/EventSection/event-3.webp);
     background-position: center;
     background-size: cover;
 }
 
 .e4 {
-    background-image: linear-gradient(transparent, black), url(../toogood/images/otherImages/EventSection/event-4.webp);
+    background-image: linear-gradient(transparent, black), url(./images/otherImages/EventSection/event-4.webp);
     background-position: center;
     background-size: cover;
 }
