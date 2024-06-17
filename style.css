@@ -294,6 +294,15 @@ nav {
     border: 1px solid #121212;
 }
 
+@media screen and (max-width : 912px) {
+    .nav-links {
+        display: none;
+    }
+
+}
+
+
+
 @media screen and (max-width : 768px) {
     .menu-btn {
         display: block;
@@ -312,7 +321,9 @@ nav {
         height: 30px;
         margin: 20px 0px;
     }
-
+    .nav-links {
+        display: none;
+    }
 
 }
 
@@ -1803,7 +1814,7 @@ footer {
 }
 
 .footer-logo img {
-    width: 300px;
+    width: 200px;
 }
 
 .footer-social {

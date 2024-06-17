@@ -350,13 +350,13 @@ nav {
 
 /* footer style */
 
+
 footer {
     width: 100%;
     height: auto;
     background-color: #161718;
+    padding-top: 80px;
     font-family: 'DM Sans', sans-serif;
-    padding: 50px 0px;
-    margin-top: 100px;
 }
 
 .footer-main {
@@ -376,7 +376,7 @@ footer {
 }
 
 .footer-logo img {
-    width: 300px;
+    width: 200px;
 }
 
 .footer-social {
@@ -389,7 +389,7 @@ footer {
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid #ffffff4b;
-    padding: 30px 0px;
+    padding: 30px;
 }
 
 .footer-mid-1 {
@@ -402,6 +402,7 @@ footer {
     font-size: 30px;
     margin-bottom: 10px;
     color: #e4c590b8;
+    line-height: 32px;
 }
 
 .footer-mid-1,
@@ -419,7 +420,7 @@ footer {
 }
 
 .footer-mid-1 form input {
-    width: 300px;
+    width: 100%;
     height: 40px;
     background-color: #ffffffd5;
     padding-left: 20px;
@@ -429,7 +430,7 @@ footer {
 }
 
 .footer-mid-1 form button {
-    width: 100px;
+    width: 100%;
     height: 40px;
     background-color: #E4C590;
     color: #121212;
@@ -502,13 +503,18 @@ footer {
 
 
 @media screen and (max-width: 768px) {
+
+    .footer-logo img {
+        width: 150px;
+    }
+
     .footer-main {
         width: 100%;
     }
 
     .footer-upper {
         flex-direction: column;
-        gap: 20px;
+        gap: 30px;
         align-items: center;
         justify-content: center;
         padding: 10px 0;
