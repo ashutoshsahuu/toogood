@@ -593,7 +593,7 @@ nav {
 
 .item1 {
     grid-area: 1 / 1 / 4 / 3;
-    background-image: url("../toogood/images/otherImages/section1/image-1.webp");
+    background-image: url("./images/otherImages/section1/image-1.webp");
     background-position: center;
     background-size: cover;
     border-radius: 1rem;
@@ -601,7 +601,7 @@ nav {
 
 .item2 {
     grid-area: 1 / 3 / 4 / 4;
-    background-image: url("../toogood/images/otherImages/section1/image-2.webp");
+    background-image: url("./images/otherImages/section1/image-2.webp");
     background-position: center;
     background-size: cover;
     border-radius: 1rem;
@@ -612,7 +612,7 @@ nav {
 .item3 {
     grid-area: 4 / 1 / 6 / 4;
     border-radius: 1rem;
-    background-image: url("../toogood/images/otherImages/section1/image-3.webp");
+    background-image: url("./images/otherImages/section1/image-3.webp");
     background-position: center;
     background-size: cover;
 
@@ -622,7 +622,7 @@ nav {
     grid-area: 1 / 4 / 3 / 5;
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
-    background-image: url("../toogood/images/otherImages/section1/image-4.webp");
+    background-image: url("./images/otherImages/section1/image-4.webp");
     background-position: center;
     background-size: cover;
 
@@ -632,7 +632,7 @@ nav {
     grid-area: 3 / 4 / 6 / 5;
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
-    background-image: url("../toogood/images/otherImages/section1/image-5.webp");
+    background-image: url("./images/otherImages/section1/image-5.webp");
     background-position: center;
     background-size: cover;
 }

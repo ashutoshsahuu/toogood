@@ -208,7 +208,7 @@ main {
     background-color: #161718;
     padding: 100px 10px;
     width: 100%;
-    background-image: url("../toogood/images/menuImages/bg-menu.webp");
+    background-image: url("./images/menuImages/bg-menu.webp");
 }
 
 div.outerbox {
