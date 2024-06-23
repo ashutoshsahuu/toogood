@@ -19,6 +19,7 @@ body {
     font-weight: 400;
     background-image: url("./images/menuImages/bg-menu.webp");
     padding: 2rem 0 0 0;
+    overflow-x: hidden;
 }
 
 
@@ -164,6 +165,69 @@ nav {
 
 
 
+@media screen and (max-width: 1024px) {
+    .menu-btn {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .nav-btn {
+        display: none;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .menu-btn {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .nav-btn {
+        display: none;
+    }
+
+    .nav-links {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 426px) {
+    .nav-logo img {
+        width: 150px;
+    }
+
+    .main-text {
+        width: 90%;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .nav-btn {
+        display: none;
+    }
+   
+}
+
+
+
+
 
 
 /* social secion start */
@@ -283,7 +347,7 @@ hr {
 }
 
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 1024px) {
     .social-right {
         display: none;
     }
@@ -299,6 +363,15 @@ hr {
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+
+    .social-card-image {
+        width: 100%;
+    }
+
+    .social-card {
+        width: 100%;
+        height: 300px;
     }
 }
 
@@ -474,7 +547,7 @@ footer {
 }
 
 .footer-mid {
-    color: #ffffff59;
+    color: #ffffffb1;
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid #ffffff4b;
@@ -542,7 +615,7 @@ footer {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    color: #ffffff60;
+    color: #ffffffb1;
     padding: 20px;
 }
 
@@ -552,7 +625,7 @@ footer {
 }
 
 
-@media screen and (max-width: 912px) {
+@media screen and (max-width: 1024px) {
     .footer-main {
         width: 100%;
     }
