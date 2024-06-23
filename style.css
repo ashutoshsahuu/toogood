@@ -2,16 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Jost:ital,wght@0,100..900;1,100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
 
-/* shouvick use for feedback part start import*/
-/* font-family: "Great Vibes", cursive; */
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
-/* font-family: 'Playfair Display', serif; */
-@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
-/* font-family: "Roboto", sans-serif; */
-@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-/* end of shouvick font import */
-
-
 
 html {
     scroll-behavior: smooth;
@@ -23,6 +13,17 @@ html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 }
 
 .container {
@@ -64,7 +65,6 @@ html {
 .to-top img:hover {
     background-color: #E4C590;
 }
-
 
 
 /* first page starts */
@@ -291,24 +291,146 @@ nav {
     border: 1px solid #121212;
 }
 
-@media screen and (max-width : 912px) {
+header {
+    font-family: 'DM Sans', sans-serif;
+    /* height: fit-content; */
+}
+
+nav {
+    border-bottom: 1px solid #aaaaaa43;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    /* border-radius: 10px; */
+    width: 100%;
+    max-width: 100%;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: transparent;
+    transition: 0.4s;
+    animation: navColor 4s forwards;
+    animation-timeline: scroll();
+    box-sizing: border-box;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 15px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+@keyframes navColor {
+    0% {
+        background-color: transparent;
+        border-bottom: 1px solid transparent;
+    }
+
+    20% {
+        background-color: #161718;
+    }
+
+    100% {
+        background-color: #161718;
+    }
+}
+
+.nav-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-logo>img {
+    width: 200px;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    font-family: "DM Sans", sans-serif;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+}
+
+.nav-links>a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 700;
+    transition: 0.4s;
+    padding: 0.5rem;
+    border-bottom: 3px solid transparent;
+}
+
+.nav-links>a:hover {
+    color: #E4C590;
+    border-bottom: 3px solid #E4C590;
+}
+
+.nav-btn a {
+    background-color: #E4C590;
+    color: #121212;
+    padding: 1rem 2rem;
+    border-radius: 2px;
+    border: transparent 1px solid;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.4s;
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.nav-btn a:hover {
+    background-color: #0E0D0B;
+    color: #FFF;
+    border: 1px solid #E4C590;
+}
+
+.menu-btn {
+    background-color: #E4C590;
+    padding: 0.5rem;
+    border-radius: 2px;
+    display: none;
+}
+
+@media screen and (max-width: 1024px) {
     .nav-links {
         display: none;
     }
 
-}
+    .nav-btn {
+        display: none;
+    }
 
+    .to-top img {
+        display: none;
+    }
 
-
-@media screen and (max-width : 768px) {
     .menu-btn {
         display: block;
     }
-    
+}
+
+@media screen and (max-width: 768px) {
+    .menu-btn {
+        display: block;
+    }
+
     .nav-links {
         display: none;
     }
-    
+
     .nav-btn {
         display: none;
     }
@@ -318,16 +440,13 @@ nav {
         height: 30px;
         margin: 20px 0px;
     }
+
     .nav-links {
         display: none;
     }
-    
 }
 
-
-
-@media screen and (max-width : 426px) {
-    
+@media screen and (max-width: 426px) {
     .nav-logo img {
         width: 150px;
     }
@@ -339,37 +458,37 @@ nav {
     .menu-btn {
         display: block;
     }
-    
+
     .nav-links {
         display: none;
     }
-    
+
     .nav-btn {
         display: none;
     }
-    
+
     .main-text>span>img {
         width: 100px;
         height: 30px;
         margin: 20px 0px;
     }
-    
+
     .btn2 {
         display: inline-block;
         margin: 30px 0px;
         cursor: pointer;
     }
-    
+
     .btn3 {
         display: inline-block;
         cursor: pointer;
     }
-    
+
     .to-top img {
         display: none;
     }
-
 }
+
 
 
 @keyframes fadeup {
@@ -413,7 +532,7 @@ nav {
 .carousal-text h2 {
     font-family: 'Forum', cursive;
     font-size: clamp(1.2rem, 3vw, 3rem);
-    color: #ebab3c;
+    color: #976e27;
 }
 
 .carousal-text img {
@@ -672,13 +791,21 @@ nav {
     text-align: center;
 }
 
-@media screen and (max-width: 912px) {
+@media screen and (max-width: 1024px) {
+
+
+
+    .section-1 {
+        height: 900px;
+
+    }
 
     .section-1-container {
         flex-direction: column;
         justify-content: center;
         gap: 3rem;
         width: 100%;
+        height: fit-content;
     }
 
     .section-1-description {
@@ -909,10 +1036,27 @@ nav {
 }
 
 
+@media screen and (max-width: 1024px) {
+    .icon-box {
+        position: relative;
+        width: 195px;
+        height: 150px;
+    }
+
+    .icon-box>img:nth-of-type(1) {
+        width: 100px;
+    }
+
+    .icon-box>img:nth-of-type(2) {
+        width: 140px;
+        height: 140px;
+    }
+}
+
 @media screen and (max-width: 768px) {
     .icon-box {
         position: relative;
-        width: 250px;
+        width: 165px;
         height: 150px;
     }
 
@@ -1231,7 +1375,6 @@ nav {
 /* Pizza Section styling Here */
 
 .pizza-animation {
-    background-color: red;
     position: relative;
     width: 1340px;
 }
@@ -1293,14 +1436,13 @@ nav {
     position: absolute;
     right: 10px;
     top: 650px;
-    animation: round 3s forwards infinite;
     transition: 3s;
 }
 
 .italic img {
     height: 150px;
     width: 150px;
-    animation: round 3s forwards infinite;
+    animation: round 20s forwards infinite;
     transition: 3s;
 }
 
@@ -1737,6 +1879,26 @@ nav {
     cursor: pointer;
 }
 
+@media screen and (max-width: 1024px) {
+    .review_card {
+        width: 85%;
+    }
+
+    .review_card-container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+    }
+
+    .review_card {
+        width: 600px;
+    }
+
+}
+
+
+
 @media screen and (max-width: 768px) {
     .review_card {
         width: 45%;
@@ -1815,7 +1977,7 @@ footer {
 }
 
 .footer-mid {
-    color: #ffffff59;
+    color: #ffffffb1;
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid #ffffff4b;
@@ -1883,7 +2045,7 @@ footer {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    color: #ffffff60;
+    color: #ffffffb1;
     padding: 20px;
 }
 
